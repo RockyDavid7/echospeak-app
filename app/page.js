@@ -1,95 +1,61 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+// app/page.js
+// This file will render the content for your homepage ("/")
+
+import Link from 'next/link';   // Import Next.js Link component for navigation
+import Image from 'next/image'; // Import Next.js Image component for optimized images
+
+// Metadata for this specific page. This will override/merge with the root layout's metadata.
+export const metadata = {
+  title: 'Language Learning for Kids & Retirees', // Only the unique part of the title
+  description: 'Learn languages with EchoSpeak using fun and interactive stories for all ages.',
+};
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <main>
+      {/* Home/Hero Section */}
+      <section id="home" className="section home">
+        <h2>Welcome to EchoSpeak</h2>
+        <p>Echo the colorful parakeet is always learning and exploring. Mike, his best friend and a bright, friendly parrot, learns by repeating everything Echo says. Together, with iconic scenes from the U.S. and Puerto Rico as their backdrop, they embark on fun language-learning adventures in English and Spanish!</p>
+        {/*
+          Using Next.js Image component for the hero image.
+          - src: Path relative to the `public` directory. You'll put this image there.
+          - alt: Important for accessibility.
+          - width, height: Essential for optimization and preventing layout shift.
+          - className: For your custom CSS.
+          - priority: Tells Next.js to preload this image as it's likely above the fold.
+        */}
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/images/ES_Landing_Page.png"
+          alt="Echo the Parakeet and Mike the Parrot in a learning scene set in Puerto Rico or the U.S."
+          width={450}
+          height={300}
+          className="hero-image"
           priority
         />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      </section>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      {/* Choose Your Learning Path Section */}
+      <section id="choose-path" className="section choose-path-section">
+        <h2>Choose Your Learning Path</h2>
+        <p>EchoSpeak is designed for two amazing groups of learners:</p>
+        <div className="path-cards-container">
+          {/* Kids Path Card */}
+          <div className="path-card">
+            <h3>🧒 For Children (Ages 3–8)</h3>
+            <p>Learn English or Spanish through fun stories with Echo and Mike as they explore Puerto Rico and the United States!</p>
+            {/* Link to the kids-path page. Next.js handles routing. */}
+            <Link href="/kids-path" className="path-button">Start Kids Path</Link>
+          </div>
+          {/* Retiree Path Card */}
+          <div className="path-card">
+            <h3>🧓 For Retirees</h3>
+            <p>Learn English or Spanish through practical travel stories and real-life situations!</p>
+            {/* Link to the retiree-path page. */}
+            <Link href="/retiree-path" className="path-button">Start Retiree Path</Link>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+    </main>
   );
 }

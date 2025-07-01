@@ -1,0 +1,1033 @@
+/* styles/globals.css - Consolidated Global Styles for EchoSpeak App */
+
+/* Global body styles */
+body {
+  margin: 0;
+  /* CHANGED font-family for better readability */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  background: #f0fdf4; /* Light mint green background */
+  color: #333; /* Dark gray text color */
+  line-height: 1.6; /* Improved readability for paragraphs */
+}
+
+/* Navbar styling for layout and appearance */
+.navbar {
+  background: linear-gradient(to right, #a7f3d0, #fcd34d); /* Gradient from sage green to yellow */
+  padding: 1.5em 1em; /* Increased padding */
+  display: flex;
+  justify-content: space-between; /* Adjusted to space out logo and nav-menu */
+  align-items: center; /* Center items vertically */
+  flex-wrap: wrap; /* Allow navbar items to wrap on smaller screens */
+  border-bottom: 5px solid #f59e0b; /* Orange border at the bottom */
+  border-radius: 0 0 15px 15px; /* Rounded bottom corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Logo styling within the navbar */
+.logo {
+  font-size: 3.5rem; /* Larger font size for prominence */
+  color: #0f766e; /* Dark teal color */
+  margin: 0; /* Removed margin here to let flexbox handle spacing */
+  text-align: center;
+  font-weight: bold; /* Ensure logo text is bold */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for pop */
+}
+
+/* Navigation menu list styling */
+.nav-menu {
+  list-style: none; /* Remove bullet points */
+  display: flex;
+  gap: 1.5em; /* Increased gap between menu items */
+  flex-wrap: wrap; /* Allow menu items to wrap on smaller screens */
+  justify-content: flex-end; /* Align menu items to the right */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Removed margin here to let flexbox handle spacing */
+}
+
+/* Styling for individual navigation links */
+.nav-menu a {
+  text-decoration: none;
+  color: #065f46; /* Dark green text color */
+  font-weight: bold;
+  font-size: 1.3em; /* Slightly larger font size */
+  background: #bbf7d0; /* Light green background for buttons */
+  padding: 0.8em 1.5em; /* Increased padding for better tap targets */
+  border-radius: 10px; /* More rounded corners */
+  transition: background 0.3s ease, color 0.3s ease, transform 0.1s ease; /* Smooth transitions */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle button shadow */
+}
+
+.nav-menu a:hover {
+  background: #34d399; /* Darker green on hover */
+  color: white;
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.nav-menu a:active {
+    transform: translateY(1px); /* Push down effect on click */
+}
+
+/* Specific style for the Login button to make it stand out slightly */
+.nav-menu .login-button {
+  background: #f59e0b; /* Orange accent color */
+  color: white;
+}
+
+.nav-menu .login-button:hover {
+  background: #ea580c; /* Darker orange on hover */
+}
+
+
+/* General section styling */
+.section {
+  padding: 3em 5vw; /* Increased padding for more breathing room */
+  text-align: center;
+  max-width: 1000px; /* Max width for content within sections */
+  margin: 0 auto; /* Center sections */
+}
+
+/* Specific styling for the hero/home section */
+.home {
+  background: linear-gradient(to bottom right, #fdf6b2, #e0f2fe); /* Light yellow to light blue gradient */
+  animation: floatIn 1.2s ease-out; /* Slower float-in animation */
+  border-radius: 15px; /* Rounded corners for the section */
+  margin-top: 2em; /* Space below navbar */
+  padding: 4em 5vw; /* More vertical padding */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+}
+
+.home h2 {
+    font-size: 2.8em; /* Larger heading for welcome message */
+    color: #f59e0b; /* Orange accent */
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.home p {
+    font-size: 1.2em; /* Larger text for intro paragraph */
+    max-width: 700px;
+    margin: 1em auto 2em auto;
+    color: #555;
+}
+
+/* Hero image styling with animation */
+.hero-image {
+  max-width: 450px; /* Slightly larger image */
+  width: 100%; /* Ensure responsiveness */
+  height: auto;
+  margin-top: 2em; /* Space above image */
+  border-radius: 20px; /* More rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+  animation: bounce 2.5s infinite ease-in-out; /* Slower, smoother bounce */
+}
+
+/* Learning path section styling */
+.choose-path-section h2 {
+    font-size: 2.5em;
+    color: #f59e0b;
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for the two path cards */
+.path-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5em; /* Increased gap between cards */
+  flex-wrap: wrap; /* Allow cards to wrap */
+  margin-top: 2.5em;
+}
+
+/* Styling for individual path cards (Kids and Retirees) */
+.path-card {
+  background: #fef9c3; /* Light cream background */
+  border-radius: 18px; /* More rounded corners */
+  padding: 2em; /* Increased padding */
+  width: 320px; /* Slightly wider cards */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Card shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  border: 2px solid #fcd34d; /* Yellow border */
+  display: flex; /* Flexbox for internal alignment */
+  flex-direction: column;
+  justify-content: space-between; /* Push button to bottom */
+}
+
+.path-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+.path-card h3 {
+    font-size: 1.8em; /* Larger heading for path titles */
+    color: #0f766e; /* Dark teal */
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+}
+
+.path-card p {
+    font-size: 1.1em; /* Clearer text for descriptions */
+    color: #666;
+    margin-bottom: 1.5em;
+    flex-grow: 1; /* Allow paragraph to take available space */
+}
+
+/* Styling for the call-to-action buttons within path cards */
+.path-button {
+  display: inline-block;
+  margin-top: 1.5em; /* Space above button */
+  background: #facc15; /* Bright yellow for kids button */
+  color: #1e3a8a; /* Dark blue text */
+  padding: 0.8em 1.8em; /* Generous padding */
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+/* Specific styling for the retiree path button */
+.path-card:nth-child(2) .path-button {
+  background: #60a5fa; /* Blue for retiree button */
+  color: #ffffff; /* White text */
+}
+
+.path-button:hover {
+  transform: translateY(-1px); /* Slight lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.path-button:active {
+    transform: translateY(0); /* Reset on click */
+}
+
+
+/* Footer styling */
+footer {
+  background: #047857; /* Dark green footer */
+  color: white;
+  text-align: center;
+  padding: 2em; /* More padding for a substantial footer */
+  margin-top: 3em; /* Space above footer */
+  border-radius: 15px 15px 0 0; /* Rounded top corners */
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+footer p {
+    margin: 0; /* Remove default paragraph margin */
+    font-size: 1.1em;
+}
+
+/* Keyframe animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); } /* Increased bounce height */
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(30px); } /* Start lower */
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Contact form specific styles */
+.contact-form-container, .login-container {
+  background: #fff; /* White background for the form area */
+  border-radius: 15px;
+  padding: 2.5em; /* Generous padding */
+  margin-top: 2em;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  text-align: left; /* Align form elements to the left */
+  max-width: 600px; /* Max width for the form itself */
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #fcd34d; /* Yellow border */
+}
+
+.contact-form-container h2, .login-container h2 {
+  font-size: 2.5em;
+  color: #f59e0b;
+  margin-bottom: 0.8em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center form heading */
+}
+
+.contact-form-container p, .login-container p {
+  text-align: center;
+  margin-bottom: 2em;
+  color: #555;
+}
+
+.form-group {
+  margin-bottom: 1.5em; /* Space between form groups */
+}
+
+.form-group label {
+  display: block; /* Make labels appear above input fields */
+  margin-bottom: 0.6em;
+  font-weight: bold;
+  color: #0f766e; /* Dark teal for labels */
+  font-size: 1.1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group textarea {
+  width: calc(100% - 24px); /* Full width minus padding and border */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  font-family: 'Verdana', sans-serif; /* Consistent font for inputs */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group textarea:focus {
+  border-color: #f59e0b; /* Orange border on focus */
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.4); /* Orange glow on focus */
+  outline: none; /* Remove default outline */
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resizing only */
+  min-height: 100px; /* Minimum height for message area */
+}
+
+.submit-button {
+  display: block; /* Make button block level for full width */
+  width: 100%;
+  padding: 1em 2em;
+  background-color: #60a5fa; /* Blue submit button */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.submit-button:hover {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.submit-button:active {
+  transform: translateY(1px);
+}
+
+.login-links {
+    text-align: center;
+    margin-top: 1.5em;
+    font-size: 0.95em;
+}
+
+.login-links a {
+    color: #0f766e;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-links a:hover {
+    color: #34d399;
+    text-decoration: underline;
+}
+
+/* FAQ specific styles */
+.faq-container {
+  background: #fff; /* White background for the FAQ area */
+  border-radius: 15px;
+  padding: 2.5em;
+  margin-top: 2em;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align FAQ questions/answers to the left */
+  max-width: 800px; /* Wider container for FAQ content */
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #fcd34d; /* Yellow border */
+}
+
+.faq-container h2 {
+  font-size: 2.5em;
+  color: #f59e0b;
+  margin-bottom: 1.2em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center FAQ heading */
+}
+
+.faq-category {
+  margin-bottom: 2.5em; /* Space between FAQ categories */
+  padding-bottom: 1.5em;
+  border-bottom: 1px dashed #ccc; /* Dashed line to separate categories */
+}
+
+.faq-category:last-child {
+  border-bottom: none; /* No border for the last category */
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.faq-category h3 {
+  font-size: 2em;
+  color: #0f766e; /* Dark teal for category titles */
+  margin-bottom: 1em;
+  text-align: center; /* Center category headings */
+}
+
+.faq-item {
+  margin-bottom: 1.5em; /* Space between individual FAQ items */
+}
+
+.faq-question {
+  font-weight: bold;
+  color: #34d399; /* Sage green for questions */
+  font-size: 1.15em;
+  margin-bottom: 0.5em;
+  cursor: pointer; /* Indicate that it's clickable (for potential future collapse/expand) */
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.faq-question::before {
+    content: '❓'; /* Question mark icon */
+    font-size: 1.2em;
+    margin-right: 0.3em;
+}
+
+.faq-answer {
+  color: #555;
+  margin-left: 2em; /* Indent answers */
+  font-size: 1em;
+  padding-left: 0.5em;
+  border-left: 3px solid #fcd34d; /* Yellow line next to answers */
+}
+
+
+/* Subscribe page specific styles */
+.subscribe-container {
+  background: #fff; /* White background for the subscribe area */
+  border-radius: 15px;
+  padding: 2.5em;
+  margin-top: 2em;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center content within container */
+  max-width: 900px; /* Wider container for pricing plans */
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #fcd34d; /* Yellow border */
+}
+
+.subscribe-container h2 {
+  font-size: 2.5em;
+  color: #f59e0b;
+  margin-bottom: 0.8em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-container p.intro-text {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 2.5em;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pricing-plans {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5em; /* Space between pricing cards */
+  margin-top: 2em;
+}
+
+.plan-card {
+  background: #fef9c3; /* Light cream background for plan cards */
+  border-radius: 18px;
+  padding: 2em;
+  width: 280px; /* Fixed width for plan cards */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #fcd34d; /* Yellow border */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Center content within card */
+}
+
+.plan-card:hover {
+    transform: translateY(-8px); /* More pronounced lift on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.plan-card h3 {
+  font-size: 2em;
+  color: #0f766e;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.plan-card .price {
+  font-size: 3em;
+  font-weight: bold;
+  color: #ef4444; /* Red for pricing */
+  margin-bottom: 0.5em;
+}
+
+.plan-card .price span {
+  font-size: 0.5em; /* Smaller for per month/year */
+  font-weight: normal;
+  color: #666;
+}
+
+.plan-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 1.5em 0;
+  text-align: left; /* Align features to the left */
+  width: 100%;
+}
+
+.plan-card ul li {
+  margin-bottom: 0.8em;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.95em;
+}
+
+.plan-card ul li::before {
+    content: '✅'; /* Checkmark icon */
+    font-size: 1.2em;
+    line-height: 1;
+}
+
+.plan-button { /* Reusing .path-button for general button styling, adjusted for subscription */
+  display: inline-block;
+  width: calc(100% - 2em); /* Adjust for padding within button */
+  padding: 1em 1.5em;
+  background-color: #60a5fa; /* Blue subscribe button */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.5em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  text-decoration: none; /* Remove underline for links acting as buttons */
+}
+
+.plan-button:hover {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.plan-button:active {
+  transform: translateY(1px);
+}
+
+
+/* Story selection container (renamed from .story-selection to match .pricing-plans/.path-cards-container) */
+.story-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5em; /* Space between story cards */
+  margin-top: 2em;
+}
+
+/* Individual story card styling (renamed from .story-card to match .plan-card/.path-card) */
+.story-card {
+  background: #fef9c3; /* Light cream background */
+  border-radius: 18px;
+  padding: 2em;
+  width: 280px; /* Fixed width for consistency */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #fcd34d; /* Yellow border */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Center content within card */
+  text-decoration: none; /* Ensure no underline if card itself becomes a link */
+  color: inherit; /* Inherit text color */
+}
+
+.story-card:hover {
+    transform: translateY(-8px); /* Lift effect on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.story-card img {
+  max-width: 100%;
+  height: 150px; /* Fixed height for consistent image size */
+  object-fit: contain; /* Image contained within the card's area */
+  border-radius: 12px;
+  margin-bottom: 1.5em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.story-card h3 {
+  font-size: 2em;
+  color: #0f766e;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.story-card p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 1.5em;
+  flex-grow: 1; /* Allow paragraph to take available space */
+}
+
+/* Button styling within story cards (renamed from .btn to .path-button) */
+/* .path-button is defined globally above */
+
+/* "Coming Soon" button specific style */
+.path-button.coming-soon {
+  background-color: #ccc; /* Grey out for coming soon */
+  cursor: not-allowed;
+}
+
+.path-button.coming-soon:hover {
+  background-color: #ccc; /* Keep grey on hover */
+  transform: translateY(0); /* No lift on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Keep original shadow */
+}
+
+
+/* Language cards container */
+.language-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5em; /* Space between language cards */
+  margin-top: 2em;
+}
+
+/* Individual language card styling */
+.language-card {
+  background: #fff7ed; /* Light orange/cream background */
+  border-radius: 18px;
+  padding: 2em;
+  width: 280px; /* Fixed width for consistency */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #fcd34d; /* Yellow border */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Center content within card */
+  text-decoration: none;
+  color: inherit;
+  position: relative; /* For "Coming Soon" overlay */
+}
+
+.language-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.language-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 1.5em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.language-card h3 {
+  font-size: 2em;
+  color: #0f766e;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.language-card p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 1.5em;
+  flex-grow: 1;
+}
+
+/* Button styling within language cards */
+.language-button { /* Reusing .path-button */
+  display: inline-block;
+  width: calc(100% - 2em);
+  padding: 1em 1.5em;
+  background-color: #60a5fa; /* Blue button color */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.5em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  text-decoration: none;
+}
+
+.language-button:hover {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.language-button:active {
+  transform: translateY(1px);
+}
+
+/* "Coming Soon" style for the button and overlay */
+.language-button.coming-soon {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.language-button.coming-soon:hover {
+  background-color: #ccc;
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.language-card.coming-soon-overlay {
+  position: relative;
+  overflow: hidden; /* Ensure overlay stays within card */
+}
+
+.language-card.coming-soon-overlay::after {
+  content: 'Coming Soon!';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  border-radius: 18px;
+  z-index: 10; /* Ensure it's above content */
+  pointer-events: none; /* Allow clicks to pass through to underlying card for visual, but button is disabled */
+}
+
+
+/* Interactive Story Page specific styles */
+.story-block {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap for responsiveness */
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  border: 2px solid #fcd34d; /* Yellow - accent border */
+  padding: 1.5rem;
+  border-radius: 16px; /* Rounded corners */
+  background-color: #fff7ed; /* Light Orange/Cream - inviting */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  gap: 1.5rem; /* Space between text and image columns */
+}
+
+/* Styling for the text content within a story block */
+.story-text {
+  flex: 1 1 55%; /* Takes more space for text */
+  min-width: 300px; /* Minimum width before wrapping to next line */
+}
+
+/* Styling for the image container within a story block */
+.story-image {
+  flex: 1 1 40%; /* Smaller space for image */
+  max-width: 400px; /* Maximum width for the image container */
+  text-align: center; /* Center image within its flex item */
+  min-width: 200px; /* Minimum width before wrapping */
+}
+
+.story-image img {
+  width: 100%; /* Image takes full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 12px; /* Rounded corners for images */
+  display: block; /* Remove extra space below image element */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for images */
+}
+
+/* Styling for the Q&A sections within story blocks */
+.qa {
+  background-color: #fefce8; /* Light yellow background for Q&A */
+  padding: 1em;
+  border-radius: 10px;
+  margin-top: 1.5em;
+  border: 1px dashed #fcd34d; /* Dashed yellow border for visual separation */
+}
+
+.qa p {
+  margin: 0.6em 0; /* Adjust vertical spacing for Q&A lines */
+  line-height: 1.6; /* Improve readability */
+}
+
+.qa strong {
+  color: #ef4444; /* Red color for "Teacher" character */
+  font-size: 1.1em; /* Slightly larger for emphasis */
+}
+
+/* Styling for translation text */
+.translation {
+  font-style: italic;
+  color: #6b7280; /* Gray for translations */
+  font-size: 0.95em;
+  margin-top: -0.5em; /* Pull translation closer to original text */
+  margin-bottom: 0.8em;
+}
+
+/* General button styling for play/audio buttons */
+button {
+  margin-left: 0.5em;
+  padding: 0.5em 1em; /* Increased padding for better tap target */
+  font-size: 1em;
+  background-color: #f59e0b; /* Orange - button color */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Slightly more rounded corners */
+  cursor: pointer;
+  min-width: 40px; /* Ensure button is tap-friendly */
+  min-height: 40px;
+  display: inline-flex; /* Allows text and icon to be centered */
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle; /* Align with surrounding text */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Add subtle shadow */
+  transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth transitions for hover/active states */
+}
+
+button:hover {
+  background-color: #ea580c; /* Darker orange on hover */
+}
+
+button:active {
+  transform: translateY(1px); /* Slight press effect when clicked */
+}
+
+/* Styling for the character response icon (e.g., the student's head) */
+.response-icon {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 1.4em; /* Larger icon */
+  vertical-align: middle; /* Align vertically with text */
+  line-height: 1; /* Helps with vertical alignment consistency */
+}
+
+
+/* 404 specific styles */
+.error-container {
+  background: #fff; /* White background for the error area */
+  border-radius: 15px;
+  padding: 3em; /* Generous padding */
+  margin-top: 2em;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #ef4444; /* Red border to signify an error */
+}
+
+.error-container h2 {
+  font-size: 4em; /* Large 404 number */
+  color: #ef4444; /* Red color */
+  margin-bottom: 0.2em;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.error-container h3 {
+  font-size: 2em;
+  color: #f59e0b; /* Orange accent */
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+.error-container p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 2em;
+}
+
+.error-image {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
+}
+
+.home-button { /* Used for "Go Back to Homepage" on 404 */
+  display: inline-block;
+  padding: 1em 2.5em;
+  background-color: #60a5fa; /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.3em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.home-button:hover {
+  background-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.home-button:active {
+  transform: translateY(1px);
+}
+
+
+/* Responsive adjustments (all media queries combined) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1em;
+    border-radius: 0; /* Remove rounded corners on small screens */
+    flex-direction: column; /* Stack logo and nav menu vertically */
+    align-items: center; /* Center items when stacked */
+  }
+  .logo {
+    font-size: 2.5rem;
+    margin-bottom: 1em; /* Add space below logo when stacked */
+  }
+  .nav-menu {
+    flex-direction: column; /* Stack nav items vertically */
+    gap: 0.8em;
+    width: 100%; /* Full width for vertical menu */
+    justify-content: center; /* Center menu items when stacked */
+  }
+  .nav-menu a {
+    width: calc(100% - 3em); /* Full width minus padding */
+    display: block; /* Make links block level */
+  }
+  .section {
+    padding: 2em 3vw; /* Reduced horizontal padding */
+  }
+  .home h2, .choose-path-section h2, .contact-form-container h2,
+  .faq-container h2, .subscribe-container h2, .language-cards-container h2,
+  .error-container h2, .login-container h2, .story-card h3 {
+      font-size: 2em; /* Adjust heading sizes */
+  }
+  .home p, .section p {
+      font-size: 1em;
+  }
+  .hero-image {
+    max-width: 90%; /* Ensure image scales down */
+    margin-top: 1.5em;
+  }
+  .path-cards-container, .story-cards-container, .pricing-plans, .language-cards-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center stacked cards */
+    gap: 2em;
+  }
+  .path-card, .story-card, .plan-card, .language-card {
+    width: 85%; /* Make cards take more width on small screens */
+    padding: 1.2em; /* Reduce card padding */
+  }
+  .path-card h3, .plan-card h3 {
+      font-size: 1.8em;
+  }
+  .path-card p, .plan-card p {
+      font-size: 1em;
+  }
+  .path-button, .plan-button, .language-button, .submit-button, .home-button {
+      width: calc(100% - 3.6em); /* Adjust button width */
+      padding: 0.8em 1.5em;
+      font-size: 1.1em;
+  }
+  .contact-form-container, .login-container, .faq-container, .subscribe-container {
+    padding: 1.5em;
+    margin-top: 1.5em;
+    border-radius: 10px;
+  }
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"],
+  .form-group textarea {
+    width: calc(100% - 20px); /* Adjust width for smaller padding */
+    padding: 10px;
+  }
+  .faq-question {
+    font-size: 1.1em;
+  }
+  .faq-answer {
+    margin-left: 1em; /* Adjust indent */
+  }
+  .language-card.coming-soon-overlay::after {
+    font-size: 2em;
+  }
+  .error-container {
+    padding: 2em;
+  }
+  .error-container h2 {
+    font-size: 3em;
+  }
+  .error-container h3 {
+    font-size: 1.8em;
+  }
+  .error-container p {
+    font-size: 1em;
+  }
+  footer {
+    padding: 1.5em;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 2rem;
+    }
+    .nav-menu a {
+        font-size: 1.1em;
+        padding: 0.6em 1em;
+    }
+    .section {
+        padding: 1.5em 2vw;
+    }
+    .home h2 {
+        font-size: 1.8em;
+    }
+    .path-card, .story-card, .plan-card, .language-card {
+        width: 95%;
+    }
+    .faq-category h3 {
+        font-size: 1.5em;
+    }
+    .faq-question {
+        font-size: 1em;
+    }
+    .language-card h3, .plan-card h3, .story-card h3 {
+        font-size: 1.5em;
+    }
+    .login-container, .contact-form-container, .faq-container, .subscribe-container, .error-container {
+        padding: 1em;
+    }
+    .error-container h2 {
+        font-size: 2.5em;
+    }
+    .error-container h3 {
+        font-size: 1.5em;
+    }
+    .language-card.coming-soon-overlay::after {
+        font-size: 1.8em;
+    }
+}

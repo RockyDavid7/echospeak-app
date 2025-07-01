@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EchoSpeak - Echo y Mike en el aeropuerto</title>
+  <style>
+    /* General body styling for font, background, and text color */
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fefce8; /* Light Yellow - inviting and bright */
+      color: #1f2937; /* Dark Gray for text */
+    }
+
+    /* Navigation bar layout and styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #a7f3d0; /* Sage Green - denotes wisdom */
+      padding: 1em 2em;
+      border-bottom: 4px solid #34d399; /* Darker Sage Green for border */
+      flex-wrap: wrap; /* Allow navbar items to wrap on smaller screens */
+    }
+
+    /* Logo styling within the navigation bar */
+    .logo {
+      font-size: 2em;
+      color: #065f46; /* Dark Green */
+      font-weight: bold;
+      margin: 0; /* Remove default margin for better control */
+    }
+
+    /* Navigation menu list and individual item styling */
+    .nav-menu {
+      list-style: none; /* Remove bullet points */
+      display: flex;
+      gap: 1.5em; /* Space between menu items */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+      flex-wrap: wrap; /* Allow menu items to wrap */
+      justify-content: center; /* Center menu items if they wrap */
+    }
+
+    .nav-menu li a {
+      text-decoration: none; /* Remove underline */
+      color: #065f46; /* Dark Green */
+      font-weight: bold;
+      padding: 0.5em 1em; /* Add padding for better touch targets */
+      border-radius: 8px; /* Rounded corners for links */
+      transition: background-color 0.3s ease; /* Smooth transition on hover/focus */
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li a:focus {
+      background-color: #d1fae5; /* Lighter sage green on hover */
+    }
+
+    /* Main content section styling */
+    .section {
+      padding: 2rem 5vw;
+      max-width: 1200px; /* Max width for content to prevent overly wide lines */
+      margin: 0 auto; /* Center the content block */
+    }
+
+    /* Heading for the story title */
+    .section h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      color: #f59e0b; /* Orange - accent color */
+      font-size: 2em; /* Larger heading */
+      margin-bottom: 1.5em;
+    }
+
+    /* Styling for individual story blocks, which contain text and an image */
+    .story-block {
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap for responsiveness */
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+      border: 2px solid #fcd34d; /* Yellow - accent border */
+      padding: 1.5rem;
+      border-radius: 16px; /* Rounded corners */
+      background-color: #fff7ed; /* Light Orange/Cream - inviting */
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Soft shadow for depth */
+      gap: 1.5rem; /* Space between text and image columns */
+    }
+
+    /* Styling for the text content within a story block */
+    .story-text {
+      flex: 1 1 55%; /* Takes more space for text */
+      min-width: 300px; /* Minimum width before wrapping to next line */
+    }
+
+    /* Styling for the image container within a story block */
+    .story-image {
+      flex: 1 1 40%; /* Smaller space for image */
+      max-width: 400px; /* Maximum width for the image container */
+      text-align: center; /* Center image within its flex item */
+      min-width: 200px; /* Minimum width before wrapping */
+    }
+
+    .story-image img {
+      width: 100%; /* Image takes full width of its container */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 12px; /* Rounded corners for images */
+      display: block; /* Remove extra space below image element */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow for images */
+    }
+
+    /* Styling for the Q&A sections within story blocks */
+    .qa {
+      background-color: #fefce8; /* Light yellow background for Q&A */
+      padding: 1em;
+      border-radius: 10px;
+      margin-top: 1.5em;
+      border: 1px dashed #fcd34d; /* Dashed yellow border for visual separation */
+    }
+
+    .qa p {
+      margin: 0.6em 0; /* Adjust vertical spacing for Q&A lines */
+      line-height: 1.6; /* Improve readability */
+    }
+
+    .qa strong {
+      color: #ef4444; /* Red color for "Teacher" character */
+      font-size: 1.1em; /* Slightly larger for emphasis */
+    }
+
+    /* Styling for translation text */
+    .translation {
+      font-style: italic;
+      color: #6b7280; /* Gray for translations */
+      font-size: 0.95em;
+      margin-top: -0.5em; /* Pull translation closer to original text */
+      margin-bottom: 0.8em;
+    }
+
+    /* General button styling for play/audio buttons */
+    button {
+      margin-left: 0.5em;
+      padding: 0.5em 1em; /* Increased padding for better tap target */
+      font-size: 1em;
+      background-color: #f59e0b; /* Orange - button color */
+      color: white;
+      border: none;
+      border-radius: 8px; /* Slightly more rounded corners */
+      cursor: pointer;
+      min-width: 40px; /* Ensure button is tap-friendly */
+      min-height: 40px;
+      display: inline-flex; /* Allows text and icon to be centered */
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle; /* Align with surrounding text */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Add subtle shadow */
+      transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth transitions for hover/active states */
+    }
+
+    button:hover {
+      background-color: #ea580c; /* Darker orange on hover */
+    }
+
+    button:active {
+      transform: translateY(1px); /* Slight press effect when clicked */
+    }
+
+    /* Styling for the character response icon (e.g., the student's head) */
+    .response-icon {
+      display: inline-block;
+      margin-right: 5px;
+      font-size: 1.4em; /* Larger icon */
+      vertical-align: middle; /* Align vertically with text */
+      line-height: 1; /* Helps with vertical alignment consistency */
+    }
+
+    /* Footer styling */
+    footer {
+      text-align: center;
+      padding: 1.5em; /* More padding for a substantial footer */
+      background-color: #fef3c7; /* Lighter Yellow */
+      color: #78350f; /* Brownish - footer text color */
+      border-top: 2px solid #fde68a; /* Yellow - footer border */
+      margin-top: 3em; /* More space above footer */
+      border-radius: 12px 12px 0 0; /* Rounded top corners for a soft edge */
+    }
+
+    /* Responsive adjustments for smaller screens (e.g., mobile) */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 1em;
+      }
+
+      .logo {
+        margin-bottom: 0.5em; /* Add space below logo */
+      }
+
+      .nav-menu {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 0.5em;
+        width: 100%; /* Full width for vertical menu */
+        text-align: center; /* Center menu items when stacked */
+      }
+
+      .nav-menu li a {
+        display: block; /* Make links take full width for easier tapping */
+      }
+
+      .story-block {
+        flex-direction: column; /* Stack story content vertically */
+        align-items: center; /* Center content when stacked */
+        padding: 1rem;
+      }
+
+      .story-text {
+        padding-right: 0; /* Remove right padding when stacked */
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text */
+        min-width: unset; /* Remove min-width constraint on small screens */
+      }
+
+      .story-image {
+        order: -1; /* Move image above text on small screens */
+        margin-bottom: 1rem; /* Add space below image */
+        width: 100%; /* Full width for image container */
+        max-width: 100%; /* Ensure image doesn't overflow */
+        min-width: unset; /* Remove min-width constraint on small screens */
+      }
+
+      .section h2 {
+        font-size: 1.5em; /* Adjust heading size for small screens */
+        justify-content: center; /* Center main heading */
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <h1 class="logo">EchoSpeak</h1>
+    <nav aria-label="Main navigation"> <!-- Use nav for navigation links and add aria-label for accessibility -->
+      <ul class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#stories">Stories</a></li>
+        <li><a href="#lessons">Lessons</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="section">
+    <!-- Story Title and Play button -->
+    <h2>🛬 Echo y Mike en el aeropuerto <button aria-label="Reproducir audio del título" onclick="speak('Echo y Mike en el aeropuerto', 'es-ES')">🔊</button></h2>
+
+    <!-- Story Block 1: Echo and Mike at the airport -->
+    <div class="story-block">
+      <div class="story-text">
+        <p><strong>Echo y Mike están en el aeropuerto.</strong> <button aria-label="Reproducir audio de la frase: Echo y Mike están en el aeropuerto." onclick="speak('Echo y Mike están en el aeropuerto.', 'es-ES')">🔊</button></p>
+        <p class="translation">Echo and Mike are at the airport.</p>
+        <div class="qa">
+          <p>👨‍🏫 ¿Dónde están Echo y Mike? <button aria-label="Reproducir audio de la pregunta: ¿Dónde están Echo y Mike?" onclick="speak('¿Dónde están Echo y Mike?', 'es-ES')">🔊</button></p>
+          <p class="translation">Where are Echo and Mike?</p>
+          <p><span class="response-icon">🧓</span> Ellos están en el aeropuerto. <button aria-label="Reproducir audio de la respuesta: Ellos están en el aeropuerto." onclick="speak('Ellos están en el aeropuerto.', 'es-ES')">🔊</button></p>
+          <p class="translation">They are at the airport.</p>
+        </div>
+      </div>
+      <div class="story-image">
+        <!-- Placeholder image for "Echo and Mike in an airport lobby" -->
+        <img src="https://placehold.co/300x200/a7f3d0/065f46?text=Airport+Lobby" alt="Echo and Mike in an airport lobby" />
+      </div>
+    </div>
+
+    <!-- Story Block 2: They have their passports and tickets -->
+    <div class="story-block">
+      <div class="story-text">
+        <p><strong>Ellos tienen sus pasaportes y boletos.</strong> <button aria-label="Reproducir audio de la frase: Ellos tienen sus pasaportes y boletos." onclick="speak('Ellos tienen sus pasaportes y boletos.', 'es-ES')">🔊</button></p>
+        <p class="translation">They have their passports and tickets.</p>
+        <div class="qa">
+          <p>👨‍� ¿Qué tienen Echo y Mike? <button aria-label="Reproducir audio de la pregunta: ¿Qué tienen Echo y Mike?" onclick="speak('¿Qué tienen Echo y Mike?', 'es-ES')">🔊</button></p>
+          <p class="translation">What do Echo and Mike have?</p>
+          <p><span class="response-icon">🧓</span> Tienen sus pasaportes y boletos. <button aria-label="Reproducir audio de la respuesta: Tienen sus pasaportes y boletos." onclick="speak('Tienen sus pasaportes y boletos.', 'es-ES')">🔊</button></p>
+          <p class="translation">They have their passports and tickets.</p>
+        </div>
+      </div>
+      <div class="story-image">
+        <!-- Placeholder image for "Echo and Mike holding passports and tickets" -->
+        <img src="https://placehold.co/300x200/fcd34d/78350f?text=Passports+%26+Tickets" alt="Echo and Mike holding passports and tickets" />
+      </div>
+    </div>
+
+    <!-- Story Block 3: They go through airport security -->
+    <div class="story-block">
+      <div class="story-text">
+        <p><strong>Pasan por la seguridad del aeropuerto.</strong> <button aria-label="Reproducir audio de la frase: Pasan por la seguridad del aeropuerto." onclick="speak('Pasan por la seguridad del aeropuerto.', 'es-ES')">🔊</button></p>
+        <p class="translation">They go through airport security.</p>
+        <div class="qa">
+          <p>👨‍🏫 ¿Por dónde pasan Echo y Mike? <button aria-label="Reproducir audio de la pregunta: ¿Por dónde pasan Echo y Mike?" onclick="speak('¿Por dónde pasan Echo y Mike?', 'es-ES')">🔊</button></p>
+          <p class="translation">Where do Echo and Mike go through?</p>
+          <p><span class="response-icon">🧓</span> Pasan por la seguridad. <button aria-label="Reproducir audio de la respuesta: Pasan por la seguridad." onclick="speak('Pasan por la seguridad.', 'es-ES')">🔊</button></p>
+          <p class="translation">They go through security.</p>
+        </div>
+      </div>
+      <div class="story-image">
+        <!-- Placeholder image for "Echo and Mike at airport security check" -->
+        <img src="https://placehold.co/300x200/a7f3d0/065f46?text=Security+Check" alt="Echo and Mike at airport security check" />
+      </div>
+    </div>
+
+    <!-- Story Block 4: They look for their boarding gate, Gate A four -->
+    <div class="story-block">
+      <div class="story-text">
+        <p><strong>Buscan su puerta de embarque, la Puerta A cuatro.</strong> <button aria-label="Reproducir audio de la frase: Buscan su puerta de embarque, la Puerta A cuatro." onclick="speak('Buscan su puerta de embarque, la Puerta A cuatro.', 'es-ES')">🔊</button></p>
+        <p class="translation">They look for their boarding gate, Gate A four.</p>
+        <div class="qa">
+          <p>👨‍🏫 ¿Qué número de puerta buscan? <button aria-label="Reproducir audio de la pregunta: ¿Qué número de puerta buscan?" onclick="speak('¿Qué número de puerta buscan?', 'es-ES')">🔊</button></p>
+          <p class="translation">What gate number are they looking for?</p>
+          <p><span class="response-icon">🧓</span> Buscan la Puerta A cuatro. <button aria-label="Reproducir audio de la respuesta: Buscan la Puerta A cuatro." onclick="speak('Buscan la Puerta A cuatro.', 'es-ES')">🔊</button></p>
+          <p class="translation">They are looking for Gate A four.</p>
+        </div>
+      </div>
+      <div class="story-image">
+        <!-- Placeholder image for "Echo and Mike looking for Gate A4" -->
+        <img src="https://placehold.co/300x200/fcd34d/78350f?text=Gate+A4" alt="Echo and Mike looking for Gate A4" />
+      </div>
+    </div>
+
+    <!-- Story Block 5: Finally, they board the plane and say "Goodbye!" -->
+    <div class="story-block">
+      <div class="story-text">
+        <p><strong>Finalmente, abordan el avión y dicen "¡Adiós!"</strong> <button aria-label="Reproducir audio de la frase: Finalmente, abordan el avión y dicen ¡Adiós!" onclick="speak('Finalmente, abordan el avión y dicen "¡Adiós!"', 'es-ES')">🔊</button></p>
+        <p class="translation">Finally, they board the plane and say "Goodbye!"</p>
+        <div class="qa">
+          <p>👨‍🏫 ¿Qué hacen al final? <button aria-label="Reproducir audio de la pregunta: ¿Qué hacen al final?" onclick="speak('¿Qué hacen al final?', 'es-ES')">🔊</button></p>
+          <p class="translation">What do they do at the end?</p>
+          <p><span class="response-icon">🧓</span> Abordan el avión. <button aria-label="Reproducir audio de la respuesta: Abordan el avión." onclick="speak('Abordan el avión.', 'es-ES')">🔊</button></p>
+          <p class="translation">They board the plane.</p>
+        </div>
+      </div>
+      <div class="story-image">
+        <!-- Placeholder image for "Echo and Mike boarding a plane" -->
+        <img src="https://placehold.co/300x200/a7f3d0/065f46?text=Boarding+Plane" alt="Echo and Mike boarding a plane" />
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EchoSpeak. All rights reserved.</p>
+  </footer>
+
+  <script>
+    /**
+     * Function to speak the provided text using the Web Speech API.
+     * @param {string} text - The text to be spoken.
+     * @param {string} lang - The language code (e.g., 'es-ES' for Spanish).
+     */
+    function speak(text, lang = 'es-ES') {
+      // Create a new SpeechSynthesisUtterance object
+      const utterance = new SpeechSynthesisUtterance(text);
+      // Set the language for the utterance
+      utterance.lang = lang;
+      // Use the speechSynthesis API to speak the utterance
+      speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EchoSpeak - Los niños en la escuela</title>
+  <style>
+     /* Global body styles (copied from landing_page for consistency) */
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #f0fdf4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar styling (copied from landing_page) */
+    .navbar {
+      background: linear-gradient(to right, #a7f3d0, #fcd34d);
+      padding: 1.5em 1em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-bottom: 5px solid #f59e0b;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Logo styling (copied from landing_page) */
+    .logo {
+      font-size: 3.5rem;
+      color: #0f766e;
+      margin: 0.2em 0 0.5em 0;
+      text-align: center;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Navigation menu list styling (copied from landing_page) */
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1.5em;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Styling for individual navigation links (copied from landing_page) */
+    .nav-menu a {
+      text-decoration: none;
+      color: #065f46;
+      font-weight: bold;
+      font-size: 1.3em;
+      background: #bbf7d0;
+      padding: 0.8em 1.5em;
+      border-radius: 10px;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.1s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu a:hover {
+      background: #34d399;
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .nav-menu a:active {
+        transform: translateY(1px);
+    }
+
+    /* General section styling (copied from landing_page) */
+    .section {
+      padding: 3em 5vw;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .story-block {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+      border: 2px solid #fcd34d;
+      padding: 1.5rem;
+      border-radius: 16px;
+      background-color: #fff7ed;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .story-text {
+      flex: 1 1 55%;
+      padding-right: 2rem;
+    }
+    .story-image {
+      flex: 1 1 40%;
+      max-width: 300px;
+    }
+    .story-image img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    .qa p {
+      margin: 0.4em 0;
+    }
+    .translation {
+      font-style: italic;
+      color: #6b7280;
+      font-size: 0.9em;
+    }
+    button {
+      margin-left: 0.5em;
+      padding: 0.3em 0.6em;
+      font-size: 1em;
+      background-color: #f59e0b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #fef3c7;
+      color: #78350f;
+      border-top: 2px solid #fde68a;
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <h1 class="logo">EchoSpeak</h1>
+        <ul class="nav-menu">
+        <li><a href="C:\Users\drmac\Desktop\WebApp\index.html">Home</a></li>
+        <li><a href="#choose-path">Discovery Paths</a></li>
+        <li><a href="C:\Users\drmac\Desktop\WebApp\ES_Languages_Pg.HTML">Languages</a></li>
+        <li><a href="C:\Users\drmac\Desktop\WebApp\FAQs.HTML">FAQs</a></li>
+        <li><a href="C:\Users\drmac\Desktop\WebApp\Contact_Us_Form.HTML">Contact Us</a></li>
+        <li><a href="C:\Users\drmac\Desktop\WebApp\Subscription_Pg.html">Subscribe</a></li>
+        <li><a href="C:\Users\drmac\Desktop\WebApp\ES_Login.HTML">Login</a></li> 
+
+      </ul>
+  </header>
+
+  <main class="section">
+    <h2>📚 Echo y Mike van a la escuela <button onclick="speak('Eko y Mike van a la escuela', 'es-PR')">🔊</button></h2>
+
+    <div class="story-block">
+      <div class="story-text">
+        <p><strong>Los niños van a la escuela.</strong> <button onclick="speak('Los niños van a la escuela.', 'es-PR')">🔊</button></p>
+        <p class="translation">The children go to school.</p>
+        <div class="qa">
+          <p>👨‍🏫 ¿Quiénes van a la escuela? <button onclick="speak('¿Quiénes van a la escuela?', 'es-PR')">🔊</button></p>
+          <p class="translation">Who goes to school?</p>
+          <p>🧒 Los niños van a la escuela. <button onclick="speak('Los niños van a la escuela.', 'es-PR')">🔊</button></p>
+          <p class="translation">The children go to school.</p>
+
+          <p>👨‍🏫 ¿Van a la escuela o al parque? <button onclick="speak('¿Van a la escuela o al parque?', 'es-PR')">🔊</button></p>
+          <p class="translation">Do they go to school or the park?</p>
+          <p>🧒 Van a la escuela. <button onclick="speak('Van a la escuela.', 'es-PR')">🔊</button></p>
+          <p class="translation">They go to school.</p>
+        </div>
+      </div>
+      <div class="story-image">
+        <img src="C:\Users\drmac\Desktop\WebApp\Childrens Imgs School\Kid_EyM_2_School.png" alt="Children at school" />
+      </div>
+    </div>
+
+    <div class="story-block">
+      <div class="story-text">
+        <p><strong>La maestra enseña matemáticas.</strong> <button onclick="speak('La maestra enseña matemáticas.', 'es-PR')">🔊</button></p>
+        <p class="translation">The teacher teaches math.</p>
+        <div class="qa">
+          <p>👨‍🏫 ¿Qué enseña la maestra? <button onclick="speak('¿Qué enseña la maestra?', 'es-PR')">🔊</button></p>
+          <p class="translation">What does the teacher teach?</p>
+          <p>🧒 Ella enseña matemáticas. <button onclick="speak('Ella enseña matemáticas.', 'es-PR')">🔊</button></p>
+          <p class="translation">She teaches math.</p>
+
+          <p>👨‍🏫 ¿Enseña inglés o matemáticas? <button onclick="speak('¿Enseña inglés o matemáticas?', 'es-PR')">🔊</button></p>
+          <p class="translation">Does she teach English or math?</p>
+          <p>🧒 Enseña matemáticas. <button onclick="speak('Enseña matemáticas.', 'es-PR')">🔊</button></p>
+          <p class="translation">She teaches math.</p>
+        </div>
+      </div>
+      <div class="story-image">
+        <img src="C:\Users\drmac\Desktop\WebApp\Childrens Imgs School\Kid_EyM_Math.png" alt="Teacher and students in math class" />
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 EchoSpeak. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function speak(text, lang = 'es-PR') {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = lang;
+      speechSynthesis.speak(utterance);
+    }
+  </script>
+</body>
+</html>
+

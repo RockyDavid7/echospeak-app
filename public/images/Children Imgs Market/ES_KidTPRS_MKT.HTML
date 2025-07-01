@@ -1,0 +1,100 @@
+<section class="section" id="stories">
+  <h2>Interactive Stories</h2>
+  <p>Echo and Mike take you on fun journeys around Puerto Rico and the U.S.! Hear the story, repeat the words, and learn together.</p>
+
+  <div class="story-card">
+    <h3>Echo at the Market / Echo en el Mercado</h3>
+    <p id="line1">Echo goes to the market in San Juan. / Echo va al mercado en San Juan.</p>
+    <button onclick="speakLine('Echo goes to the market in San Juan. Echo va al mercado en San Juan.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line1')">🎤 Repeat</button>
+
+    <p id="line2">He sees mangoes and bananas. / Ve mangos y plátanos.</p>
+    <button onclick="speakLine('He sees mangoes and bananas. Ve mangos y plátanos.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line2')">🎤 Repeat</button>
+
+    <p id="line3">He buys three bananas. / Compra tres plátanos.</p>
+    <button onclick="speakLine('He buys three bananas. Compra tres plátanos.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line3')">🎤 Repeat</button>
+
+    <p id="line4">Echo says, "Yum!" / Echo dice, "¡Qué rico!"</p>
+    <button onclick="speakLine('Echo says, Yum! Echo dice, ¡Qué rico!', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line4')">🎤 Repeat</button>
+  </div>
+
+  <div class="story-card">
+    <h3>Mike's Picture / El Cuadro de Miguel</h3>
+    <p id="line5">Mike wants to find a beautiful picture. / Miguel quiere encontrar una imagen hermosa.</p>
+    <button onclick="speakLine('Mike wants to find a beautiful picture. Miguel quiere encontrar una imagen hermosa.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line5')">🎤 Repeat</button>
+
+    <p id="line6">He goes to Chicago. / Él va a Chicago.</p>
+    <button onclick="speakLine('He goes to Chicago. Él va a Chicago.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line6')">🎤 Repeat</button>
+
+    <p id="line7">He forgets to find the picture. / Él se olvida de encontrar la imagen.</p>
+    <button onclick="speakLine('He forgets to find the picture. Él se olvida de encontrar la imagen.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line7')">🎤 Repeat</button>
+
+    <p id="line8">He is sad. / Él está triste.</p>
+    <button onclick="speakLine('He is sad. Él está triste.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line8')">🎤 Repeat</button>
+
+    <p id="line9">He takes the train to New York. / Él toma el tren a Nueva York.</p>
+    <button onclick="speakLine('He takes the train to New York. Él toma el tren a Nueva York.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line9')">🎤 Repeat</button>
+
+    <p id="line10">Mike changes his money. / Miguel cambia su dinero.</p>
+    <button onclick="speakLine('Mike changes his money. Miguel cambia su dinero.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line10')">🎤 Repeat</button>
+
+    <p id="line11">He goes to Central Park. / Él va a Central Park.</p>
+    <button onclick="speakLine('He goes to Central Park. Él va a Central Park.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line11')">🎤 Repeat</button>
+
+    <p id="line12">Mike buys a beautiful picture. / Miguel compra una imagen hermosa.</p>
+    <button onclick="speakLine('Mike buys a beautiful picture. Miguel compra una imagen hermosa.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line12')">🎤 Repeat</button>
+
+    <p id="line13">The picture has flowers, trees, and a lake. / La imagen tiene flores, árboles y un lago.</p>
+    <button onclick="speakLine('The picture has flowers, trees, and a lake. La imagen tiene flores, árboles y un lago.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line13')">🎤 Repeat</button>
+
+    <p id="line14">He hangs the picture on the wall. / Él cuelga la imagen en la pared.</p>
+    <button onclick="speakLine('He hangs the picture on the wall. Él cuelga la imagen en la pared.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line14')">🎤 Repeat</button>
+
+    <p id="line15">Now, he is very happy. / Ahora, él está muy feliz.</p>
+    <button onclick="speakLine('Now, he is very happy. Ahora, él está muy feliz.', 'en')">🔊 Hear it</button>
+    <button onclick="listenAndRepeat('line15')">🎤 Repeat</button>
+  </div>
+</section>
+
+<script>
+function speakLine(text, langCode = 'en-US') {
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = langCode === 'en' ? 'en-US' : 'es-PR';
+  speechSynthesis.speak(utterance);
+}
+
+function listenAndRepeat(id) {
+  if (!('webkitSpeechRecognition' in window)) {
+    alert("Speech recognition not supported on this browser.");
+    return;
+  }
+  const recognition = new webkitSpeechRecognition();
+  recognition.lang = id.includes('es') ? 'es-PR' : 'en-US';
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  recognition.onresult = function(event) {
+    const result = event.results[0][0].transcript;
+    alert(`You said: "${result}" — Great job!`);
+  };
+
+  recognition.onerror = function() {
+    alert("Oops! Please try again.");
+  };
+
+  recognition.start();
+}
+</script>
