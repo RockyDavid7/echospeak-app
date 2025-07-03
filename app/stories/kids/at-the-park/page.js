@@ -50,7 +50,7 @@ if (typeof window !== 'undefined') {
 }
 
 // Speak function with optional rate control
-async function speak(text, lang = 'es-ES', rate = 0.8) {
+async function speak(text, lang = 'es-ES', rate = 0.7) {
   if (!('speechSynthesis' in window)) {
     console.error('Web Speech API is not supported in this browser.');
     return;
@@ -92,7 +92,7 @@ export default function AtTheParkStoryPage() {
   return (
     <main className="section">
       <h2 style={{ fontSize: '2.5em', color: '#f59e0b', marginBottom: '1em', textAlign: 'center' }}>
-        🌳 Echo y Mike en el parque <span style={{ fontSize: '0.8em', color: '#0f766e' }}>(English ➡️ Spanish)</span>
+        🌳 Echo y Mike en el parque <span style={{ fontSize: '0.8em', color: '#0f766e' }}></span>
         {isClient && (
           <button aria-label="Reproducir audio del título: Echo y Mike en el parque" onClick={() => speak('Eko y Mike en el parque', 'es-ES', 0.7)} style={{ marginLeft: '10px' }}>🔊</button>
         )}
@@ -100,6 +100,9 @@ export default function AtTheParkStoryPage() {
 
       <p style={{ fontSize: '1.1em', color: '#555', marginBottom: '2.5em', maxWidth: '700px', margin: '1em auto' }}>
         Play with Echo and Mike at the park and discover new words related to nature and games.
+        {isClient && (
+              <button aria-label="Play the phrase" onClick={() => speak('Play with Echo and Mike at the park and discover new words related to nature and games', 'en-EN', 0.7)}>🔊</button>
+            )}
       </p>
 
       {/* Story Block 1: Arrival at the park */}
@@ -108,20 +111,20 @@ export default function AtTheParkStoryPage() {
           <p>
             <strong>Echo y Mike van al parque. El parque es grande.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Eko y Mike van al parque. El parque es grande.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Eko y Mike van al parque. El parque es grande.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">Echo and Mike go to the park. The park is big.</p>
           <div className="qa">
             <p>👨‍🏫 ¿A dónde van Echo y Mike?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿A dónde van Eko y Mike?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿A dónde van Eko y Mike?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">Where do Echo and Mike go?</p>
             <p><span className="response-icon">🦜</span> Ellos van al parque.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Ellos van al parque.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Ellos van al parque.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">They go to the park.</p>
@@ -129,7 +132,7 @@ export default function AtTheParkStoryPage() {
         </div>
         <div className="story-image">
           <Image
-            src="/images/kid-park-arrival.png"
+            src="/images/EyM_Arrive_Park.jpeg"
             alt="Echo and Mike arriving at a large park"
             width={400}
             height={250}
@@ -153,20 +156,33 @@ export default function AtTheParkStoryPage() {
           <p>
             <strong>En el parque, hay un árbol. Hay una flor roja.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('En el parque, hay un árbol. Hay una flor roja.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('En el parque, hay un árbol. Hay una flor roja.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">In the park, there is a tree. There is a red flower.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Qué hay en el parque?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué hay en el parque?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué hay en el parque?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">What is in the park?</p>
             <p><span className="response-icon">🦜</span> Hay un árbol y una flor.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Hay un árbol y una flor.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Hay un árbol y una flor.', 'es-ES', 0.7)}>🔊</button>
+            )}
+            </p>
+            <p className="translation">There is a tree and a flower.</p>
+
+            <p>👨‍🏫 ¿Hay una flor rojo o verde??
+            {isClient && (
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Hay uns flor rojo o verde?', 'es-ES', 0.7)}>🔊</button>
+            )}
+            </p>
+            <p className="translation">Is there a red flower or a green flower?</p>
+            <p><span className="response-icon">🦜</span> Hay una flor rojo.
+            {isClient && (
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Hay una flor rojo.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">There is a tree and a flower.</p>
@@ -180,28 +196,41 @@ export default function AtTheParkStoryPage() {
           <p>
             <strong>Echo y Mike juegan con una pelota. ¡Están muy contentos!</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Eko y Mike juegan con una pelota. Están muy contentos.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Eko y Mike juegan con una pelota. Están muy contentos.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">Echo and Mike play with a ball. They are very happy!</p>
           <div className="qa">
             <p>👨‍🏫 ¿Con qué juegan?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Con qué juegan?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Con qué juegan?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">What do they play with?</p>
             <p><span className="response-icon">🦜</span> Juegan con una pelota.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Juegan con una pelota.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Juegan con una pelota.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">They play with a ball.</p>
+
+            <p>👨‍🏫 ¿Estan tristes o contentos?
+            {isClient && (
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Estan tristes o contentos?', 'es-ES', 0.7)}>🔊</button>
+            )}
+            </p>
+            <p className="translation">Are they sad or happy?</p>
+            <p><span className="response-icon">🦜</span> Estan contentos.
+            {isClient && (
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Estan contentos.', 'es-ES', 0.7)}>🔊</button>
+            )}
+            </p>
+            <p className="translation">They are happy.</p>
           </div>
         </div>
         <div className="story-image">
           <Image
-            src="/images/kid-park-playing.png"
+            src="/images/EyM_Park_Ball.png"
             alt="Echo and Mike playing with a ball in the park"
             width={400}
             height={250}

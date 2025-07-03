@@ -77,7 +77,7 @@ export default function AtTheMarketStoryPage() {
   return (
     <main className="section">
       <h2 style={{ fontSize: '2.5em', color: '#f59e0b', marginBottom: '1em', textAlign: 'center' }}>
-        🛒 Echo y Mike en el mercado <span style={{ fontSize: '0.8em', color: '#0f766e' }}>(English ➡️ Spanish)</span>
+        🛒 Echo y Mike en el mercado <span style={{ fontSize: '0.8em', color: '#0f766e' }}></span>
         {isClient && (
           <button aria-label="Reproducir audio del título: Echo y Mike en el mercado" onClick={() => speak('Eko y Mike en el mercado', 'es-ES', 0.7)} style={{ marginLeft: '10px' }}>🔊</button> // Example: slower rate for title
         )}
@@ -85,6 +85,9 @@ export default function AtTheMarketStoryPage() {
 
       <p style={{ fontSize: '1.1em', color: '#555', marginBottom: '2.5em', maxWidth: '700px', margin: '1em auto' }}>
         Help Echo and Mike shop for fruit and snacks while learning Spanish food vocabulary!
+        {isClient && (
+              <button aria-label="Play the phrase: Help Echo and Mike shop for fruit and snacks while learning Spanish food vocabulary!" onClick={() => speak('Help Eko and Mike shop for fruit and snacks while learning Spanish food vocabulary!', 'en-EN', 0.7)}>🔊</button> // Rate 0.7
+            )}
       </p>
 
       {/* Story Block 1: Echo wants to buy fruit */}
@@ -139,7 +142,7 @@ export default function AtTheMarketStoryPage() {
       <div className="story-block">
         <div className="story-image">
           <Image
-            src="/images/Kid_Mike_2_Mkt.png"
+            src="/images/Kid_Mike_2_Mkt .png"
             alt="Mike walking to the market"
             width={400}
             height={250}

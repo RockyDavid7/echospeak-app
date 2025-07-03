@@ -77,7 +77,7 @@ export default function GoingToSchoolStoryPage() {
   return (
     <main className="section">
       <h2 style={{ fontSize: '2.5em', color: '#f59e0b', marginBottom: '1em', textAlign: 'center' }}>
-        📚 Echo y Mike van a la escuela <span style={{ fontSize: '0.8em', color: '#0f766e' }}>(English ➡️ Spanish)</span>
+        📚 Echo y Mike van a la escuela <span style={{ fontSize: '0.8em', color: '#0f766e' }}></span>
         {isClient && (
           <button aria-label="Reproducir audio del título: Echo y Mike van a la escuela" onClick={() => speak('Eko y Mike van a la escuela', 'es-ES', 0.7)} style={{ marginLeft: '10px' }}>🔊</button> // Example: slower rate for title
         )}
@@ -85,6 +85,9 @@ export default function GoingToSchoolStoryPage() {
 
       <p style={{ fontSize: '1.1em', color: '#555', marginBottom: '2.5em', maxWidth: '700px', margin: '1em auto' }}>
         Join Echo and Mike as they go to school in San Juan and learn classroom words in Spanish!
+        {isClient && (
+              <button aria-label="Play the phrase: Join Echo and Mike as they go to school and learn classroom words in Spanish" onClick={() => speak('Join Eko and Mike as they go to school and learn classroom words in Spanish', 'en-EN', 0.7)}>🔊</button> // Rate 0.7
+            )}
       </p>
 
       {/* Story Block 1: The children go to school */}

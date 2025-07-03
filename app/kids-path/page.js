@@ -1,72 +1,138 @@
 // app/kids-path/page.js
+"use client"; // This is a Client Component
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Don't forget to import Image
+import Image from 'next/image';
 
-// Metadata for this specific page.
-export const metadata = {
-  title: 'Kid\'s Path - English to Spanish',
-  description: 'Explore fun and interactive Spanish stories for children with Echo and Mike.',
-};
 
 export default function KidsPathPage() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Mark as client-side after mount
+  }, []);
+
   return (
-    <main className="section"> {/* Applied section class to main for consistent padding */}
-      <h2>🇺🇸 Learn Spanish with Echo and Mike!</h2>
-      <p>Explore the language of Puerto Rico with fun and interactive stories. Start by selecting a story below:</p>
+    <main className="section">
+      <h2 style={{ fontSize: '2.5em', color: '#f59e0b', marginBottom: '1em', textAlign: 'center' }}>
+        Kid&apos;s Path: Fun Stories for Young Learners
+      </h2>
+      <p style={{ fontSize: '1.1em', color: '#555', marginBottom: '2.5em', maxWidth: '700px', margin: '1em auto' }}>
+        Embark on exciting adventures with Echo and Mike! Each story is designed to introduce new Spanish words and phrases through engaging narratives and interactive questions.
+      </p>
 
       <div className="story-cards-container">
-        {/* Story Card: Going to School (Active) */}
+        {/* Story Card: Going to School */}
         <div className="story-card">
           <Image
-            src="/images/ES_EyM_School_LP.png"
-            alt="Cartoon characters going to school"
-            width={280} // Consistent width as per your CSS
-            height={150} // Consistent height as per your CSS
+            src="/images/Kid_EyM_2_School.png"
+            alt="Echo and Mike going to school"
+            width={300}
+            height={200}
+            className="story-card-image"
           />
-          <h3>🎒 Going to School</h3>
-          <p>Join Echo and Mike as they go to school in San Juan and learn classroom words in Spanish.</p>
-          <Link href="/stories/kids/going-to-school" className="path-button">Start Story</Link>
+          <h3>📚 Going to School</h3>
+          <p>Learn classroom words as Echo and Mike go to school.</p>
+          {isClient && (
+            <Link href="/stories/kids/going-to-school" className="path-button">Start Story</Link>
+          )}
         </div>
 
         {/* Story Card: At the Market */}
         <div className="story-card">
           <Image
-            src="/images/ES_EyM_MKT_LP.png"
-            alt="Cartoon characters at a market"
-            width={280}
-            height={150}
+            src="/images/Kid_Echo_Buys_Fruit.png"
+            alt="Echo and Mike at the market"
+            width={300}
+            height={200}
+            className="story-card-image"
           />
-          <h3>🍎 At the Market</h3>
-          <p>Help Echo and Mike shop for fruit and snacks while learning Spanish food vocabulary!</p>
-          {/* Link is now active, and 'coming-soon' class is removed */}
-          <Link href="/stories/kids/at-the-market" className="path-button">Start Story</Link>
+          <h3>🛒 At the Market</h3>
+          <p>Help Echo and Mike shop for fruit and snacks.</p>
+          {isClient && (
+            <Link href="/stories/kids/at-the-market" className="path-button">Start Story</Link>
+          )}
         </div>
 
-        {/* Story Card: At the Park (Coming Soon) */}
+        {/* Story Card: At the Park*/}
         <div className="story-card">
           <Image
-            src="/images/ES_EyM_Park_LP.png"
-            alt="Cartoon characters playing in a park"
-            width={280}
-            height={150}
+            src="/images/ES_EyM_Park.png"
+            alt="Echo and Mike playing at the park"
+            width={300}
+            height={200}
+            className="story-card-image"
           />
           <h3>🌳 At the Park</h3>
-          <p>Play with Echo and Mike at the park and discover new words related to nature and games.</p>
-          <Link href="#" className="path-button coming-soon" aria-disabled="true">Coming Soon</Link>
+          <p>Play with Echo and Mike and discover nature words.</p>
+          {isClient && (
+            <Link href="/stories/kids/at-the-park" className="path-button">Start Story</Link>
+          )}
         </div>
 
-        {/* Story Card: At the Beach (Coming Soon) */}
+        {/* Story Card: At the Farm*/}
         <div className="story-card">
           <Image
-            src="/images/ES_EyM_Beach.png"
-            alt="Cartoon characters at the beach"
-            width={280}
-            height={150}
+            src="/images/EyM_Arrive_Farm.jpeg"
+            alt="Echo and Mike visiting a farm"
+            width={300}
+            height={200}
+            className="story-card-image"
+          />
+          <h3>🚜 At the Farm</h3>
+          <p>Join Echo and Mike on an exciting trip to the farm.</p>
+          {isClient && (
+            <Link href="/stories/kids/at-the-farm" className="path-button">Start Story</Link>
+          )}
+        </div>
+
+        {/* Story Card: At the Beach*/}
+        <div className="story-card">
+          <Image
+            src="/images/EyM_At_Beach.png"
+            alt="Echo and Mike at the beach"
+            width={300}
+            height={200}
+            className="story-card-image"
           />
           <h3>🏖️ At the Beach</h3>
-          <p>Splash around with Echo and Mike and learn about beach activities and sea animals in Spanish.</p>
-          <Link href="#" className="path-button coming-soon" aria-disabled="true">Coming Soon</Link>
+          <p>Splash around with Echo and Mike and learn beach words.</p>
+          {isClient && (
+            <Link href="/stories/kids/at-the-beach" className="path-button">Start Story</Link>
+          )}
+        </div>
+
+        {/* Story Card: At the Zoo*/}
+        <div className="story-card">
+          <Image
+            src="/images/Kid_Zoo/EyM_Zoo_LP.png"
+            alt="Echo and Mike at the Zoo"
+            width={300}
+            height={200}
+            className="story-card-image"
+          />
+          <h3>🦁 At the Zoo</h3>
+          <p>Explore the animal kingdom and learn animal names.</p>
+          {isClient && (
+            <Link href="/stories/kids/at-the-zoo" className="path-button">Start Story</Link>
+          )}
+        </div>
+
+        {/* Story Card: At the Aquarium*/}
+        <div className="story-card">
+          <Image
+            src="/images/EyM_At_Aquarium_LP.png"
+            alt="Echo and Mike at the Aquarium"
+            width={300}
+            height={200}
+            className="story-card-image"
+          />
+          <h3>🐠 At the Aquarium</h3>
+          <p>Dive into the ocean world and learn about sea creatures.</p>
+          {isClient && (
+            <Link href="/stories/kids/at-the-aquarium" className="path-button">Start Story</Link>
+          )}
         </div>
       </div>
     </main>

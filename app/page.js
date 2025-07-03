@@ -16,7 +16,7 @@ export default function Home() {
       {/* Home/Hero Section */}
       <section id="home" className="section home">
         <h2>Welcome to EchoSpeak</h2>
-        <p>Echo the colorful parakeet is always learning and exploring. Mike, his best friend and a bright, friendly parrot, learns by repeating everything Echo says. Together, with iconic scenes from the U.S. and Puerto Rico as their backdrop, they embark on fun language-learning adventures in English and Spanish!</p>
+        <p>Echo the colorful parrot is always exploring to learn new things. She learns a lot from Mike the friendly and multilingual parakeet and her best friend. Echo learns new languages by repeating everything Mike says across the many wordly adventures. Echo is on a quest to learn as much as Mike so together they can embark on exciting new travles and language-learning adventures with out the need to rely on anything but their own abilities!</p>
         {/*
           Using Next.js Image component for the hero image.
           - src: Path relative to the `public` directory. You'll put this image there.
@@ -26,7 +26,7 @@ export default function Home() {
           - priority: Tells Next.js to preload this image as it's likely above the fold.
         */}
         <Image
-          src="/images/ES_Landing_Page.png"
+          src="/images/EyM_Animated_LP.jpg"
           alt="Echo the Parakeet and Mike the Parrot in a learning scene set in Puerto Rico or the U.S."
           width={450}
           height={300}
@@ -35,15 +35,15 @@ export default function Home() {
         />
       </section>
 
-      {/* Choose Your Learning Path Section */}
+      {/* Choose Your Language Discovery Path Section */}
       <section id="choose-path" className="section choose-path-section">
-        <h2>Choose Your Learning Path</h2>
-        <p>EchoSpeak is designed for two amazing groups of learners:</p>
+        <h2>Choose Your Language Discovery Path</h2>
+        <p>EchoSpeak is currently designed for two amazing groups of learners:</p>
         <div className="path-cards-container">
           {/* Kids Path Card */}
           <div className="path-card">
             <h3>🧒 For Children (Ages 3–8)</h3>
-            <p>Learn English or Spanish through fun stories with Echo and Mike as they explore Puerto Rico and the United States!</p>
+            <p>Learn English or Spanish through fun stories with Echo and Mike as they explore the Spanish-speaking world!</p>
             {/* Link to the kids-path page. Next.js handles routing. */}
             <Link href="/kids-path" className="path-button">Start Kids Path</Link>
           </div>
