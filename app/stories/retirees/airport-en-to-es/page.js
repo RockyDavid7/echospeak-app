@@ -60,7 +60,7 @@ if (typeof window !== 'undefined') {
 }
 
 // Speak function with optional rate control, now asynchronous
-async function speak(text, lang = 'es-ES', rate = 0.8) {
+async function speak(text, lang = 'es-ES', rate = 0.7) {
   if (!('speechSynthesis' in window)) {
     console.error('Web Speech API is not supported in this browser.');
     return;
@@ -128,20 +128,20 @@ export default function AirportStoryPage() {
           <p>
             <strong>Echo y Mike están en el aeropuerto.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase: Echo y Mike están en el aeropuerto." onClick={() => speak('Eko y Mike están en el aeropuerto.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase: Echo y Mike están en el aeropuerto." onClick={() => speak('Eko y Mike están en el aeropuerto.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">Echo and Mike are at the airport.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Dónde están Echo y Mike?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta: ¿Dónde están Echo y Mike?" onClick={() => speak('¿Dónde están Eko y Mike?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta: ¿Dónde están Echo y Mike?" onClick={() => speak('¿Dónde están Eko y Mike?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">Where are Echo and Mike?</p>
             <p><span className="response-icon">🧓</span> Ellos están en el aeropuerto.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta: Ellos están en el aeropuerto." onClick={() => speak('Ellos están en el aeropuerto.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta: Ellos están en el aeropuerto." onClick={() => speak('Ellos están en el aeropuerto.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">They are at the airport.</p>
@@ -173,20 +173,20 @@ export default function AirportStoryPage() {
           <p>
             <strong>Ellos tienen sus pasaportes y boletos.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase: Ellos tienen sus pasaportes y boletos." onClick={() => speak('Ellos tienen sus pasaportes y boletos.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase: Ellos tienen sus pasaportes y boletos." onClick={() => speak('Ellos tienen sus pasaportes y boletos.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">They have their passports and tickets.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Qué tienen Echo y Mike?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta: ¿Qué tienen Echo y Mike?" onClick={() => speak('¿Qué tienen Eko y Mike?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta: ¿Qué tienen Echo y Mike?" onClick={() => speak('¿Qué tienen Eko y Mike?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">What do Echo and Mike have?</p>
             <p><span className="response-icon">🧓</span> Tienen sus pasaportes y boletos.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta: Tienen sus pasaportes y boletos." onClick={() => speak('Tienen sus pasaportes y boletos.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta: Tienen sus pasaportes y boletos." onClick={() => speak('Tienen sus pasaportes y boletos.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">They have their passports and tickets.</p>
@@ -200,20 +200,20 @@ export default function AirportStoryPage() {
           <p>
             <strong>Pasan por la seguridad del aeropuerto.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase: Pasan por la seguridad del aeropuerto." onClick={() => speak('Pasan por la seguridad del aeropuerto.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase: Pasan por la seguridad del aeropuerto." onClick={() => speak('Pasan por la seguridad del aeropuerto.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">They go through airport security.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Por dónde pasan Echo y Mike?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta: ¿Por dónde pasan Echo y Mike?" onClick={() => speak('¿Por dónde pasan Eko y Mike?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta: ¿Por dónde pasan Echo y Mike?" onClick={() => speak('¿Por dónde pasan Eko y Mike?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">Where do Echo and Mike go through?</p>
             <p><span className="response-icon">🧓</span> Pasan por la seguridad.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta: Pasan por la seguridad." onClick={() => speak('Pasan por la seguridad.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta: Pasan por la seguridad." onClick={() => speak('Pasan por la seguridad.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">They go through security.</p>
@@ -245,20 +245,20 @@ export default function AirportStoryPage() {
           <p>
             <strong>Buscan su puerta de embarque, la Puerta A cuatro.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase: Buscan su puerta de embarque, la Puerta A cuatro." onClick={() => speak('Buscan su puerta de embarque, la Puerta A cuatro.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase: Buscan su puerta de embarque, la Puerta A cuatro." onClick={() => speak('Buscan su puerta de embarque, la Puerta A cuatro.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">They look for their boarding gate, Gate A four.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Qué número de puerta buscan?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta: ¿Qué número de puerta buscan?" onClick={() => speak('¿Qué número de puerta buscan?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta: ¿Qué número de puerta buscan?" onClick={() => speak('¿Qué número de puerta buscan?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">What gate number are they looking for?</p>
             <p><span className="response-icon">🧓</span> Buscan la Puerta A cuatro.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta: Buscan la Puerta A cuatro." onClick={() => speak('Buscan la Puerta A cuatro.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta: Buscan la Puerta A cuatro." onClick={() => speak('Buscan la Puerta A cuatro.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">They are looking for Gate A four.</p>
@@ -272,20 +272,20 @@ export default function AirportStoryPage() {
           <p>
             <strong>Finalmente, abordan el avión y dicen &quot;¡Adiós!&quot;</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase: Finalmente, abordan el avión y dicen ¡Adiós!" onClick={() => speak('Finalmente, abordan el avión y dicen ¡Adiós!', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase: Finalmente, abordan el avión y dicen ¡Adiós!" onClick={() => speak('Finalmente, abordan el avión y dicen ¡Adiós!', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">Finally, they board the plane and say &quot;Goodbye!&quot;</p>
           <div className="qa">
             <p>👨‍🏫 ¿Qué hacen al final?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta: ¿Qué hacen al final?" onClick={() => speak('¿Qué hacen al final?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta: ¿Qué hacen al final?" onClick={() => speak('¿Qué hacen al final?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">What do they do at the end?</p>
             <p><span className="response-icon">🧓</span> Abordan el avión.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta: Abordan el avión." onClick={() => speak('Abordan el avión.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta: Abordan el avión." onClick={() => speak('Abordan el avión.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">They board the plane.</p>

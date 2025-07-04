@@ -50,7 +50,7 @@ if (typeof window !== 'undefined') {
 }
 
 // Speak function with optional rate control
-async function speak(text, lang = 'es-ES', rate = 0.8) {
+async function speak(text, lang = 'es-ES', rate = 0.7) {
   if (!('speechSynthesis' in window)) {
     console.error('Web Speech API is not supported in this browser.');
     return;
@@ -108,20 +108,20 @@ export default function AtTheRestaurantStoryPage() {
           <p>
             <strong>Eko y Mike entran en un restaurante mexicano. La camarera los saluda.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Eko y Mike entran en un restaurante mexicano. La camarera los saluda.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Eko y Mike entran en un restaurante mexicano. La camarera los saluda.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">Eko and Mike enter a Mexican restaurant. The waitress greets them.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Dónde están Eko y Mike?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Dónde están Eko y Mike?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Dónde están Eko y Mike?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">Where are Eko and Mike?</p>
             <p><span className="response-icon">🦜</span> Están en un restaurante mexicano.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Están en un restaurante mexicano.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Están en un restaurante mexicano.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">They are in a Mexican restaurant.</p>
@@ -153,20 +153,20 @@ export default function AtTheRestaurantStoryPage() {
           <p>
             <strong>Eko pide unos tacos al pastor y Mike pide enchiladas.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Eko pide unos tacos al pastor y Mike pide enchiladas.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Eko pide unos tacos al pastor y Mike pide enchiladas.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">Eko orders some tacos al pastor and Mike orders enchiladas.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Qué pide Eko?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué pide Eko?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué pide Eko?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">What does Eko order?</p>
             <p><span className="response-icon">🦜</span> Eko pide tacos al pastor.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Eko pide tacos al pastor.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Eko pide tacos al pastor.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">Eko orders tacos al pastor.</p>
@@ -180,20 +180,20 @@ export default function AtTheRestaurantStoryPage() {
           <p>
             <strong>La comida es deliciosa. A Eko le encantan los sabores de México.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('La comida es deliciosa. A Eko le encantan los sabores de México.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('La comida es deliciosa. A Eko le encantan los sabores de México.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">The food is delicious. Eko loves the flavors of Mexico.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Qué le gusta a Eko?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué le gusta a Eko?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué le gusta a Eko?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">What does Eko like?</p>
             <p><span className="response-icon">🦜</span> Le encantan los sabores de México.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Le encantan los sabores de México.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Le encantan los sabores de México.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">They love the flavors of Mexico.</p>

@@ -129,7 +129,7 @@ export default function AtTheZooStoryPage() {
         </div>
         <div className="story-image">
           <Image
-            src="/images/kid-zoo-entrance.png"
+            src="/images/Kid_Zoo/EyM_Enter_Zoo.png"
             alt="Echo and Mike at the entrance of a zoo"
             width={400}
             height={250}
@@ -142,7 +142,7 @@ export default function AtTheZooStoryPage() {
       <div className="story-block">
         <div className="story-image">
           <Image
-            src="/images/kid-zoo-lion.png"
+            src="/images/Kid_Zoo/EyM_Zoo_Lion.png"
             alt="Echo and Mike looking at a lion in its enclosure"
             width={400}
             height={250}
@@ -201,7 +201,7 @@ export default function AtTheZooStoryPage() {
         </div>
         <div className="story-image">
           <Image
-            src="/images/kid-zoo-monkey.png"
+            src="/images/Kid_Zoo/EyM_Zoo_Monkeys.png"
             alt="Echo and Mike watching monkeys jumping"
             width={400}
             height={250}

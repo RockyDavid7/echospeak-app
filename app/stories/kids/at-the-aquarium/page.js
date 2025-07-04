@@ -50,7 +50,7 @@ if (typeof window !== 'undefined') {
 }
 
 // Speak function with optional rate control
-async function speak(text, lang = 'es-ES', rate = 0.8) {
+async function speak(text, lang = 'es-ES', rate = 0.7) {
   if (!('speechSynthesis' in window)) {
     console.error('Web Speech API is not supported in this browser.');
     return;
@@ -92,9 +92,9 @@ export default function AtTheAquariumStoryPage() {
   return (
     <main className="section">
       <h2 style={{ fontSize: '2.5em', color: '#f59e0b', marginBottom: '1em', textAlign: 'center' }}>
-        🐠 Echo y Mike en el acuario <span style={{ fontSize: '0.8em', color: '#0f766e' }}>(English ➡️ Spanish)</span>
+        🐠 Echo y Mike en el acuario <span style={{ fontSize: '0.8em', color: '#0f766e' }}></span>
         {isClient && (
-          <button aria-label="Reproducir audio del título: Echo y Mike en el acuario" onClick={() => speak('Echo y Mike en el acuario', 'es-ES', 0.7)} style={{ marginLeft: '10px' }}>🔊</button>
+          <button aria-label="Reproducir audio del título: Echo y Mike en el acuario" onClick={() => speak('Eko y Mike en el acuario', 'es-ES', 0.7)} style={{ marginLeft: '10px' }}>🔊</button>
         )}
       </h2>
 
@@ -108,20 +108,20 @@ export default function AtTheAquariumStoryPage() {
           <p>
             <strong>Echo y Mike visitan el acuario. El acuario es grande.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Echo y Mike visitan el acuario. El acuario es grande.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Eko y Mike visitan el acuario. El acuario es grande.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">Echo and Mike visit the aquarium. The aquarium is big.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Qué visitan Echo y Mike?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué visitan Echo y Mike?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué visitan Eko y Mike?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">What do Echo and Mike visit?</p>
             <p><span className="response-icon">🦜</span> Ellos visitan el acuario.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Ellos visitan el acuario.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Ellos visitan el acuario.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">They visit the aquarium.</p>
@@ -129,7 +129,7 @@ export default function AtTheAquariumStoryPage() {
         </div>
         <div className="story-image">
           <Image
-            src="/images/kid-aquarium-entrance.png"
+            src="/images/Kid_Aquarium/EyM_In_Aquarium.png"
             alt="Echo and Mike at the entrance of an aquarium"
             width={400}
             height={250}
@@ -142,7 +142,7 @@ export default function AtTheAquariumStoryPage() {
       <div className="story-block">
         <div className="story-image">
           <Image
-            src="/images/kid-aquarium-fish.png"
+            src="/images/Kid_Aquarium/EyM_Colorful_Fish.png"
             alt="Echo and Mike looking at colorful fish in a large tank"
             width={400}
             height={250}
@@ -153,20 +153,20 @@ export default function AtTheAquariumStoryPage() {
           <p>
             <strong>Ven muchos peces de colores. Los peces nadan rápido.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Ven muchos peces de colores. Los peces nadan rápido.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Ven muchos peces de colores. Los peces nadan rápido.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">They see many colorful fish. The fish swim fast.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Qué ven en el acuario?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué ven en el acuario?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué ven en el acuario?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">What do they see in the aquarium?</p>
             <p><span className="response-icon">🦜</span> Ven muchos peces.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Ven muchos peces.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Ven muchos peces.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">They see many fish.</p>
@@ -180,20 +180,20 @@ export default function AtTheAquariumStoryPage() {
           <p>
             <strong>También ven un tiburón grande. El tiburón es gris.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('También ven un tiburón grande. El tiburón es gris.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('También ven un tiburón grande. El tiburón es gris.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">They also see a big shark. The shark is gray.</p>
           <div className="qa">
             <p>👨‍🏫 ¿De qué color es el tiburón?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿De qué color es el tiburón?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿De qué color es el tiburón?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">What color is the shark?</p>
             <p><span className="response-icon">🦜</span> El tiburón es gris.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('El tiburón es gris.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('El tiburón es gris.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">The shark is gray.</p>
@@ -201,7 +201,7 @@ export default function AtTheAquariumStoryPage() {
         </div>
         <div className="story-image">
           <Image
-            src="/images/kid-aquarium-shark.png"
+            src="/images/Kid_Aquarium/EyM_Shark.png"
             alt="Echo and Mike looking at a large gray shark in a tank"
             width={400}
             height={250}

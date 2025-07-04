@@ -25,9 +25,9 @@ function loadAndSelectVoice() {
       spanishVoice = voices.find(voice => voice.lang.startsWith('es'));
     }
     if (spanishVoice) {
-      console.log("Selected Spanish voice for market story:", spanishVoice.name, spanishVoice.lang);
+      console.log("Selected Spanish voice:", spanishVoice.name, spanishVoice.lang);
     } else {
-      console.warn("No specific Spanish voice found for market story, using default for 'es-ES'.");
+      console.warn("No specific Spanish voice found, using default for 'es-ES'.");
     }
   };
   if (speechSynthesis.onvoiceschanged !== undefined) {
@@ -88,7 +88,53 @@ export default function AtTheMarketStoryPage() {
         
       </p>
 
-      {/* Story Block 1: Echo wants to buy fruit */}
+       {/* Story Block 1: Echo and Mike walk to the market */}
+      <div className="story-block">
+        <div className="story-image">
+          <Image
+            src="/images/Kid_Market/EyM_Walk_2_Market.png"
+            alt="Mike walking to the market"
+            width={400}
+            height={250}
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
+          />
+        </div>
+        <div className="story-text">
+          <p>
+            <strong> Echo and Mike camina al mercado.</strong>
+            {isClient && (
+              <button aria-label="Reproducir audio de Eko y Mike caminan hacia el mercado." onClick={() => speak('Mike camina al mercado.', 'es-ES', 0.7)}>🔊</button> // Rate 0.7
+            )}
+          </p>
+          <p className="translation">Echo and Mike walk to the market.</p>
+          <div className="qa">
+            <p>👨‍🏫 ¿Quién camina al mercado?
+            {isClient && (
+              <button aria-label="Reproducir audio de Quién caminan hacia el mercado?" onClick={() => speak('¿Quién camina al mercado?', 'es-ES', 0.7)}>🔊</button> // Rate 0.7
+            )}
+            </p>
+            <p className="translation">Who walks to the market?</p>
+            <p>🧒 Mike camina al mercado.
+            {isClient && (
+              <button aria-label="Reproducir audio de Eko y Mike caminan el mercado." onClick={() => speak('Mike camina al mercado.', 'es-ES', 0.7)}>🔊</button> // Rate 0.7
+            )}
+            </p>
+            <p className="translation">Echo and Mike walk to the market.</p>
+            <p>👨‍🏫 ¿Camina Mike o Echo?
+            {isClient && (
+              <button aria-label="Reproducir audio de ¿La Maestra o Eko y Mike caminan hasta el mercado?" onClick={() => speak('¿La Maestra o Eko y Mike caminan hasta el mercado?', 'es-ES', 0.7)}>🔊</button> // Rate 0.7
+            )}
+            </p>
+            <p className="translation">Does the Teacher walk to the Market or does Echo and Mike walk to the market?</p>
+            <p>🧒 Mike camina al mercado.
+            {isClient && (
+              <button aria-label="Reproducir audio de ¿El maestro camina hasta el mercado o Eko y Mike caminan hasta el mercado?." onClick={() => speak('Eko y Mike caminan hacia el mercado.', 'es-ES', 0.7)}>🔊</button> // Rate 0.7
+            )}
+            </p>
+            <p className="translation">Echo and Mike walk to the market.</p>
+          </div>
+
+      {/* Story Block 2: Echo wants to buy fruit */}
       <div className="story-block">
         <div className="story-text">
           <p>
@@ -127,7 +173,7 @@ export default function AtTheMarketStoryPage() {
         </div>
         <div className="story-image">
           <Image
-            src="/images/Kid_Echo_Buys_Fruit.png"
+            src="/images/Kid_Market/EyM_Buy_ Fruit.png"
             alt="Echo at the market buying fruit"
             width={400}
             height={250}
@@ -136,51 +182,6 @@ export default function AtTheMarketStoryPage() {
         </div>
       </div>
 
-      {/* Story Block 2: Mike walks to the market */}
-      <div className="story-block">
-        <div className="story-image">
-          <Image
-            src="/images/Kid_Mike_2_Mkt .png"
-            alt="Mike walking to the market"
-            width={400}
-            height={250}
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
-          />
-        </div>
-        <div className="story-text">
-          <p>
-            <strong>Mike camina al mercado.</strong>
-            {isClient && (
-              <button aria-label="Reproducir audio de Mike camina al mercado." onClick={() => speak('Mike camina al mercado.', 'es-ES', 0.7)}>🔊</button> // Rate 0.7
-            )}
-          </p>
-          <p className="translation">Mike walks to the market.</p>
-          <div className="qa">
-            <p>👨‍🏫 ¿Quién camina al mercado?
-            {isClient && (
-              <button aria-label="Reproducir audio de Quién camina al mercado?" onClick={() => speak('¿Quién camina al mercado?', 'es-ES', 0.7)}>🔊</button> // Rate 0.7
-            )}
-            </p>
-            <p className="translation">Who walks to the market?</p>
-            <p>🧒 Mike camina al mercado.
-            {isClient && (
-              <button aria-label="Reproducir audio de Mike camina al mercado." onClick={() => speak('Mike camina al mercado.', 'es-ES', 0.7)}>🔊</button> // Rate 0.7
-            )}
-            </p>
-            <p className="translation">Mike walks to the market.</p>
-            <p>👨‍🏫 ¿Camina Mike o Echo?
-            {isClient && (
-              <button aria-label="Reproducir audio de Camina Mike o Echo?" onClick={() => speak('¿Camina Mike o Eko?', 'es-ES', 0.7)}>🔊</button> // Rate 0.7
-            )}
-            </p>
-            <p className="translation">Does Mike walk or Echo walk to the market?</p>
-            <p>🧒 Mike camina al mercado.
-            {isClient && (
-              <button aria-label="Reproducir audio de Mike camina al mercado." onClick={() => speak('Mike camina al mercado.', 'es-ES', 0.7)}>🔊</button> // Rate 0.7
-            )}
-            </p>
-            <p className="translation">Mike walks to the market.</p>
-          </div>
         </div>
       </div>
     </main>

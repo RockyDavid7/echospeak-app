@@ -122,7 +122,7 @@ export default function KidsPathPage() {
         {/* Story Card: At the Aquarium*/}
         <div className="story-card">
           <Image
-            src="/images/Kid_Aquarium/EyM_At_Aquarium_LP.png"
+            src="/images/Kid_Aquarium/EyM_Aquarium_LP.png"
             alt="Echo and Mike at the Aquarium"
             width={300}
             height={200}

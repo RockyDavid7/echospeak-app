@@ -50,7 +50,7 @@ if (typeof window !== 'undefined') {
 }
 
 // Speak function with optional rate control
-async function speak(text, lang = 'es-ES', rate = 0.8) {
+async function speak(text, lang = 'es-ES', rate = 0.7) {
   if (!('speechSynthesis' in window)) {
     console.error('Web Speech API is not supported in this browser.');
     return;
@@ -108,20 +108,20 @@ export default function HotelStoryPage() {
           <p>
             <strong>Echo y Miguel llegan al Hotel Palacio. Están cansados del viaje.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Eko y Miguel llegan al Hotel Palacio. Están cansados del viaje.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Eko y Miguel llegan al Hotel Palacio. Están cansados del viaje.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">Echo and Miguel arrive at the Palace Hotel. They are tired from the trip.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Quiénes llegan al hotel?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Quiénes llegan al hotel?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Quiénes llegan al hotel?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">Who arrives at the hotel?</p>
             <p><span className="response-icon">🧓</span> Echo y Miguel llegan al hotel.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Eko y Miguel llegan al hotel.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Eko y Miguel llegan al hotel.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">Echo and Miguel arrive at the hotel.</p>
@@ -153,20 +153,20 @@ export default function HotelStoryPage() {
           <p>
             <strong>Hablan con la amable recepcionista en el mostrador. La recepcionista sonríe.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Hablan con la amable recepcionista en el mostrador. La recepcionista sonríe.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Hablan con la amable recepcionista en el mostrador. La recepcionista sonríe.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">They speak with the kind receptionist at the counter. The receptionist smiles.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Con quién hablan?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Con quién hablan?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Con quién hablan?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">Who do they speak with?</p>
             <p><span className="response-icon">🧓</span> Hablan con la recepcionista.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Hablan con la recepcionista.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Hablan con la recepcionista.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">They speak with the receptionist.</p>
@@ -180,20 +180,20 @@ export default function HotelStoryPage() {
           <p>
             <strong>La recepcionista les da la tarjeta-llave de su habitación. Es la habitación 305.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('La recepcionista les da la tarjeta-llave de su habitación. Es la habitación 305.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('La recepcionista les da la tarjeta-llave de su habitación. Es la habitación 305.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">The receptionist gives them their room key card. It&apos;s room 305.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Qué les da la recepcionista?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué les da la recepcionista?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué les da la recepcionista?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">What does the receptionist give them?</p>
             <p><span className="response-icon">🧓</span> Les da la tarjeta-llave.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Les da la tarjeta-llave.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Les da la tarjeta-llave.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">She gives them the key card.</p>
@@ -225,20 +225,20 @@ export default function HotelStoryPage() {
           <p>
             <strong>Un botones les ayuda con sus maletas. Las maletas son muy grandes.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Un botones les ayuda con sus maletas. Las maletas son muy grandes.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Un botones les ayuda con sus maletas. Las maletas son muy grandes.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">A bellhop helps them with their suitcases. The suitcases are very big.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Quién les ayuda con las maletas?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Quién les ayuda con las maletas?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Quién les ayuda con las maletas?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">Who helps them with the suitcases?</p>
             <p><span className="response-icon">🧓</span> Un botones les ayuda.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Un botones les ayuda.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Un botones les ayuda.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">A bellhop helps them.</p>
@@ -252,20 +252,20 @@ export default function HotelStoryPage() {
           <p>
             <strong>Entran en su habitación. Es espaciosa y tiene un balcón con vistas al mar.</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Entran en su habitación. Es espaciosa y tiene un balcón con vistas al mar.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Entran en su habitación. Es espaciosa y tiene un balcón con vistas al mar.', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">They enter their room. It is spacious and has a balcony with a sea view.</p>
           <div className="qa">
             <p>👨‍🏫 ¿Cómo es la habitación?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Cómo es la habitación?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Cómo es la habitación?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">What is the room like?</p>
             <p><span className="response-icon">🧓</span> La habitación es espaciosa y tiene un balcón.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('La habitación es espaciosa y tiene un balcón.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('La habitación es espaciosa y tiene un balcón.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">The room is spacious and has a balcony.</p>
@@ -297,20 +297,20 @@ export default function HotelStoryPage() {
           <p>
             <strong>Echo pregunta: &quot;¿Dónde está el restaurante, por favor?&quot;</strong>
             {isClient && (
-              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Eko pregunta: ¿Dónde está el restaurante, por favor?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la frase" onClick={() => speak('Eko pregunta: ¿Dónde está el restaurante, por favor?', 'es-ES', 0.7)}>🔊</button>
             )}
           </p>
           <p className="translation">Echo asks: &quot;Where is the restaurant, please?&quot;</p>
           <div className="qa">
             <p>👨‍🏫 ¿Qué pregunta Echo?
             {isClient && (
-              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué pregunta Eko?', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la pregunta" onClick={() => speak('¿Qué pregunta Eko?', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">What does Echo ask?</p>
             <p><span className="response-icon">🧓</span> Pregunta dónde está el restaurante.
             {isClient && (
-              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Pregunta dónde está el restaurante.', 'es-ES', 0.8)}>🔊</button>
+              <button aria-label="Reproducir audio de la respuesta" onClick={() => speak('Pregunta dónde está el restaurante.', 'es-ES', 0.7)}>🔊</button>
             )}
             </p>
             <p className="translation">She asks where the restaurant is.</p>

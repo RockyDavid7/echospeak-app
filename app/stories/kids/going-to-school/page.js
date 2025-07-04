@@ -128,7 +128,7 @@ export default function GoingToSchoolStoryPage() {
         </div>
         <div className="story-image">
           <Image
-            src="/images/Kid_EyM_2_School.png"
+            src="/images/Kid_School/EyM_2_School.png"
             alt="Children at school"
             width={400}
             height={250}
@@ -141,8 +141,8 @@ export default function GoingToSchoolStoryPage() {
       <div className="story-block">
         <div className="story-image">
           <Image
-            src="/images/Kid_EyM_Math.png"
-            alt="Teacher and students in math class"
+            src="/images/Kid_School/EyM_Math.png"
+            alt="Echo and Mike in math class"
             width={400}
             height={250}
             style={{ objectFit: 'cover', objectPosition: 'center' }}
