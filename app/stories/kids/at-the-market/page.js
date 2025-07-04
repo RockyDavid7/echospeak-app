@@ -85,7 +85,7 @@ export default function AtTheMarketStoryPage() {
 
       <p style={{ fontSize: '1.1em', color: '#555', marginBottom: '2.5em', maxWidth: '700px', margin: '1em auto' }}>
         Help Echo and Mike shop for fruit and snacks while learning Spanish food vocabulary!
-    
+        
       </p>
 
       {/* Story Block 1: Echo wants to buy fruit */}
