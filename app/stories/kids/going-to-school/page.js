@@ -84,10 +84,8 @@ export default function GoingToSchoolStoryPage() {
       </h2>
 
       <p style={{ fontSize: '1.1em', color: '#555', marginBottom: '2.5em', maxWidth: '700px', margin: '1em auto' }}>
-        Join Echo and Mike as they go to school in San Juan and learn classroom words in Spanish!
-        {isClient && (
-              <button aria-label="Play the phrase: Join Echo and Mike as they go to school and learn classroom words in Spanish" onClick={() => speak('Join Eko and Mike as they go to school and learn classroom words in Spanish', 'en-EN', 0.7)}>🔊</button> // Rate 0.7
-            )}
+        Join Echo and Mike as they go to school in San Juan, Puerto Rico and learn classroom words in Spanish!
+       
       </p>
 
       {/* Story Block 1: The children go to school */}

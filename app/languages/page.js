@@ -20,7 +20,7 @@ export default function LanguagesPage() {
          {/* Spanish Language Card */}
         <div className="language-card">
           <Image
-            src="/images/ES_EyM_Espanol.png" // Placeholder image path
+            src="/images/Languages/ES_EyM_Espanol.png" // Placeholder image path
             alt="Flag of Spain"
             width={280}
             height={150}
@@ -33,7 +33,7 @@ export default function LanguagesPage() {
         {/* English Language Card (Assuming English is the base/target language) */}
         <div className="language-card">
           <Image
-            src="/images/ES_EyM_GB_English.png" // Placeholder image path
+            src="/images/Languages/ES_EyM_GB_English.png" // Placeholder image path
             alt="Flag of the United States"
             width={280}
             height={150}
@@ -48,7 +48,7 @@ export default function LanguagesPage() {
         {/* Mandarin Chinese Language Card (Coming Soon) */}
         <div className="language-card coming-soon-overlay">
           <Image
-            src="/images/ES_EyM_Mandarin.png" // Placeholder image path
+            src="/images/Languages/ES_EyM_Mandarin.png" // Placeholder image path
             alt="Flag of China"
             width={280}
             height={150}
@@ -61,7 +61,7 @@ export default function LanguagesPage() {
         {/* German Language Card (Coming Soon) */}
         <div className="language-card coming-soon-overlay">
           <Image
-            src="/images/ES_EyM_Deutsch.png" // Placeholder image path
+            src="/images/Languages/ES_EyM_Deutsch.png" // Placeholder image path
             alt="Flag of Germany"
             width={280}
             height={150}
@@ -74,7 +74,7 @@ export default function LanguagesPage() {
         {/* French Language Card (Coming Soon) */}
         <div className="language-card coming-soon-overlay">
           <Image
-            src="/images/ES_EyM_French.png" // Placeholder image path
+            src="/images/Languages/ES_EyM_French.png" // Placeholder image path
             alt="Flag of France"
             width={280}
             height={150}
@@ -87,7 +87,7 @@ export default function LanguagesPage() {
         {/* Italian Language Card (Coming Soon) */}
         <div className="language-card coming-soon-overlay">
           <Image
-            src="/images/ES_EyM_Italiano.png" // Placeholder image path
+            src="/images/Languages/ES_EyM_Italiano.png" // Placeholder image path
             alt="Flag of Italy"
             width={280}
             height={150}
@@ -100,7 +100,7 @@ export default function LanguagesPage() {
         {/* Arabic Language Card (Coming Soon) */}
         <div className="language-card coming-soon-overlay">
           <Image
-            src="/images/ES_EyM_Arabic1.png" // Placeholder image path
+            src="/images/Languages/ES_EyM_Arabic1.png" // Placeholder image path
             alt="Flag of Saudi Arabia"
             width={280}
             height={150}
@@ -113,7 +113,7 @@ export default function LanguagesPage() {
         {/* Russian Language Card (Coming Soon) */}
         <div className="language-card coming-soon-overlay">
           <Image
-            src="/images/ES_EyM_Russky.png" // Placeholder image path
+            src="/images/Languages/ES_EyM_Russky.png" // Placeholder image path
             alt="Flag of Russia"
             width={280}
             height={150}

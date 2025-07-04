@@ -23,7 +23,7 @@ export default function RetireePathPage() {
             in your `public/images/` directory.
           */}
           <Image
-            src="/images/ES_EyM_Ret_Airport_LP.png"
+            src="/images/Retiree_Airport/ES_EyM_Ret_Airport_LP.png"
             alt="An airport scene with luggage"
             width={280} // Consistent width as per your CSS
             height={150} // Consistent height as per your CSS
@@ -37,7 +37,7 @@ export default function RetireePathPage() {
         <div className="story-card">
           {/* Image component for 'hotel-stay.png' */}
           <Image
-            src="/images/ES_EyM_Ret_Hotel_LP.png"
+            src="/images/Retiree_Hotel/ES_EyM_Ret_Hotel_LP.png"
             alt="A hotel lobby or room"
             width={280}
             height={150}
@@ -50,7 +50,7 @@ export default function RetireePathPage() {
         {/* Story Card: At the Restaurant*/}
         <div className="story-card">
           <Image
-            src="/images/ES_EyM_Ret_Rest_LP.png"
+            src="/images/Retiree_Restaurant/ES_EyM_Ret_Rest_LP.png"
             alt="Echo and Mike dining at a restaurant"
             width={280}
             height={150}
@@ -76,7 +76,7 @@ export default function RetireePathPage() {
       {/* Story Card: At the Medical Clinic*/}
         <div className="story-card">
         <Image
-         src="/stories/retirees/at-the-medical-clinic_LP.png"
+         src="/images/Retiree_Clinic/EyM_At_Clinic_LP.png"
          alt="Echo and Mike at a medical clinic"
          width={300}
         height={200}
@@ -89,19 +89,19 @@ export default function RetireePathPage() {
       {/* Story Card: Taking a Taxi*/}
         <div className="story-card">
         <Image
-        src="/stories/retirees/taking-an-uber-or-taxi" // Consistent with your current setup for 'Coming Soon' card images
-        alt="Echo and Mike taking an Uber or taxi"
+        src="/images/Retiree_Taxi/EyM_Taxi_LP.png" 
+        alt="Echo and Mike taking a taxi"
         width={300}
         height={200}
        />
-      <h3>🚕 Taking an Uber or Taxi</h3>
+      <h3>🚕 Taking a Taxi</h3>
      <p>Practice ordering a ride, giving directions, and asking about the fare.</p>
     <Link href="/stories/retirees/taking-a-taxi" className="path-button">Start Story</Link>
     </div>
     {/* Story Card: At the Bank*/}
         <div className="story-card">
         <Image
-        src="/stories/retirees/at-the-bank.png" 
+        src="/images/Retiree_Bank/EyM_Bank_LP.png" 
         alt="Echo and Mike at the bank"
         width={300}
         height={200}
@@ -114,7 +114,7 @@ export default function RetireePathPage() {
     {/* Story Card: Talking to the Handyman*/}
     <div className="story-card">
     <Image
-    src="/stories/retirees/talking-to-the-handyman.png"
+    src="/images/Retiree_Handyman/EyM_Handyman_LP.png"
     alt="Echo and Mike talking to the handyman"
     width={300}
     height={200}

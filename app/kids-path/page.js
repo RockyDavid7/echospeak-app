@@ -26,7 +26,7 @@ export default function KidsPathPage() {
         {/* Story Card: Going to School */}
         <div className="story-card">
           <Image
-            src="/images/Kid_EyM_2_School.png"
+            src="/images/Kid_School/Kid_EyM_2_School.png"
             alt="Echo and Mike going to school"
             width={300}
             height={200}
@@ -42,7 +42,7 @@ export default function KidsPathPage() {
         {/* Story Card: At the Market */}
         <div className="story-card">
           <Image
-            src="/images/Kid_Echo_Buys_Fruit.png"
+            src="/images/Kid_Market/Kid_Echo_Buys_Fruit.png"
             alt="Echo and Mike at the market"
             width={300}
             height={200}
@@ -58,7 +58,7 @@ export default function KidsPathPage() {
         {/* Story Card: At the Park*/}
         <div className="story-card">
           <Image
-            src="/images/ES_EyM_Park.png"
+            src="/images/Children_Park/ES_EyM_Park.png"
             alt="Echo and Mike playing at the park"
             width={300}
             height={200}
@@ -74,7 +74,7 @@ export default function KidsPathPage() {
         {/* Story Card: At the Farm*/}
         <div className="story-card">
           <Image
-            src="/images/EyM_Arrive_Farm.jpeg"
+            src="/images/Kid_Farm/EyM_Arrive_Farm.jpeg"
             alt="Echo and Mike visiting a farm"
             width={300}
             height={200}
@@ -90,7 +90,7 @@ export default function KidsPathPage() {
         {/* Story Card: At the Beach*/}
         <div className="story-card">
           <Image
-            src="/images/EyM_At_Beach.png"
+            src="/images/Kid_Beach/EyM_At_Beach.png"
             alt="Echo and Mike at the beach"
             width={300}
             height={200}
